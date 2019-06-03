@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "handlebars views/partials/calendar.handlebars -f public/calendarTemplate.js",
     "dev": "nodemon server.js",
     "prestart": "npm run build"
   },

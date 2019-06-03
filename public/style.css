@@ -1,7 +1,15 @@
 body {
+	background-color: #e6ffff;
+	font-family: 'Amatic SC', cursive;
+}
+
+.site-title {
 	font-family: 'Pacifico', cursive;
 	margin: 0;
-	background-color: #e6ffff;
+	background-color: #99ffff;
+	text-align: center;
+	color: #00b3b3;
+	border: 5px solid #00b3b3;
 }
 
 .navbar {
@@ -11,7 +19,7 @@ body {
 
 .navbar a {
 	float: left;
-	font-size: 16px;
+	font-size: 35px;
 	color: black;
 	text-align: center;
 	padding: 14px 16px;
@@ -23,7 +31,7 @@ body {
 	overflow: hidden;
 }
 
-.dropdown .dropdownbutton {
+.dropdown .dropbutton {
 	font-size: 16px;
 	border: none;
 	outline: none;

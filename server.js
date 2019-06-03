@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var express = require('express');
 var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
 
@@ -9,6 +8,8 @@ var http = require('http');
 var fs = require('fs');
 var server = http.createServer(requestHandler);
 var url = require('url');
+//var port = process.env.PORT || 3010;
+
 
 //var app = express();
 //var port = process.env.PORT || 3000;
@@ -24,9 +25,9 @@ app.set('view engine', 'handlebars');
 
 app.use(express.static('public'));
 */
+
 function requestHandler(req, res){
 		filename = 'public/homepage.html';
-//	console.log("Reading this only once?");
 	fs.readFile(filename, function(err, data) {
 		if(err){
 			res.statusCode = 404;

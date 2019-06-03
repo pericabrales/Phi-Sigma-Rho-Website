@@ -21,8 +21,8 @@ app.get('/#homepage', function(req, res, next){
     res.status(200).render('homepage');
 });
 
-app.get('/homepage', function(req, res, next){
-    res.status(200).render('homepage');
+app.get('/#active', function(req, res, next){
+    res.status(200).render('activePhotos');
 });
 
 app.get('*', function (req, res) {

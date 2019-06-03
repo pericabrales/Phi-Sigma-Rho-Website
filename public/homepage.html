@@ -10,6 +10,10 @@
 
   <link rel="stylesheet" href="style.css" media="screen">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.runtime.js" defer></script>
+
+  <script src="/calendarTemplate.js" charset="utf-8" defer></script>
+
   <script src="index.js" charset="utf-8" defer></script>
 
 </head>
@@ -35,9 +39,8 @@
 
   </header>
 
-  <main class= "calendar">
-
-  </main>
+    {{>calendar}}
+    {{{body}}}
 
 </body>
 

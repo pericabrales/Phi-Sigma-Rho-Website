@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "build": "handlebars views/partials/calendar.handlebars -f public/calendarTemplate.js",
+    "dev": "nodemon server.js",
+    "prestart": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -25,7 +27,7 @@
     "handlebars": "^4.1.2",
     "nodemon": "^1.19.1"
   },
-  
+
   "devDependencies": {
     "nodemon": "^1.19.1"
   }

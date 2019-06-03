@@ -1,0 +1,24 @@
+{
+  "positions":{
+    "pageName": "Members with Positions",
+    "photos": [
+
+    ]
+
+  },
+
+  "bigs":{
+    "pageName": "Potential Bigs",
+    "photos": [
+
+    ]
+  },
+
+  "actives":{
+    "pageNames": "Active Members",
+    "photos": [
+
+    ]
+  }
+
+}

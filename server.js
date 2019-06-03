@@ -17,6 +17,14 @@ app.get('/', function(req, res, next){
     res.status(200).render('homepage');
 });
 
+app.get('/#homepage', function(req, res, next){
+    res.status(200).render('homepage');
+});
+
+app.get('/homepage', function(req, res, next){
+    res.status(200).render('homepage');
+});
+
 app.get('*', function (req, res) {
   res.status(404).render('404Page');
 });

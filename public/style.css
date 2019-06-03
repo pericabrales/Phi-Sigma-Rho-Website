@@ -5,6 +5,7 @@ body {
 
 .site-title {
 	font-family: 'Pacifico', cursive;
+	font-size: 50px;
 	margin: 0;
 	background-color: #99ffff;
 	text-align: center;
@@ -15,6 +16,7 @@ body {
 .navbar {
 	overflow: hidden;
 	background color: #99ffcc;
+	border: 2px solid #00b3b3;
 }
 
 .navbar a {
@@ -22,7 +24,7 @@ body {
 	font-size: 35px;
 	color: black;
 	text-align: center;
-	padding: 14px 16px;
+	padding: 15px 5px 5px 15px;
 	text-decoration: none;
 }
 
@@ -32,14 +34,13 @@ body {
 }
 
 .dropdown .dropbutton {
-	font-size: 16px;
+	font-size: 35px;
 	border: none;
 	outline: none;
 	color: black;
-	padding 14px 16px;
-	background-color: white;
+	background-color: #e6ffff;
 	font-family: 'Amatic SC', cursive;
-	margin: 0;
+	margin: 15px;
 }
 
 .dropdown-content {

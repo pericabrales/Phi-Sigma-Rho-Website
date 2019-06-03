@@ -14,7 +14,8 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 
 app.get('/', function(req, res, next){
-    res.status(200).render('main');
+    res.status(200).render('homepage');
+});
 
 app.get('*', function (req, res) {
   res.status(404).render('404Page');

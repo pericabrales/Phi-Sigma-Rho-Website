@@ -43,6 +43,10 @@ body {
 	margin: 15px;
 }
 
+.navbar a:hover, .dropdown:hover .dropbutton {
+	background-color: #33ff99;
+}
+
 .dropdown-content {
 	display: none;
 	position: absolute;

@@ -5,7 +5,10 @@ body {
 
 .site-title {
 	font-family: 'Pacifico', cursive;
-	font-size: 50px;
+	font-size: 65px;
+	height: 125px;
+	align-items: center;
+	position: relative;
 	margin: 0;
 	background-color: #99ffff;
 	text-align: center;

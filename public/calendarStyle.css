@@ -10,11 +10,12 @@ ul {list-style-type: none;}
 .calendar{
   position: relative;
   top: 10px;
+  margin: 40px;
 }
 
 .calTitle{
   text-align:center;
-  font-size: 70px;
+  font-size: 60px;
   padding: 10px;
 }
 /* Month list */
@@ -24,8 +25,8 @@ ul {list-style-type: none;}
 }
 
 .month ul li {
-  color: white;
-  font-size: 50px;
+  color: #e6ffff;
+  font-size: 40px;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
@@ -33,6 +34,7 @@ ul {list-style-type: none;}
 /* Weekdays (Mon-Sun) */
 .weekdays {
   margin: 0;
+  height: 40px;
   padding: 10px 0;
   background-color:#ddd;
 }
@@ -40,14 +42,19 @@ ul {list-style-type: none;}
 .weekdays li {
   display: inline-block;
   width: 13.6%;
-  color: #666;
+  color: black;
   text-align: center;
+  position: relative;
+  top: 5px;
+  font-size: 25px;
+  font-weight: 500;
 }
 
 /* Days (1-30) */
 .days {
   padding: 10px 0;
   background: #eee;
+  height: 300px;
   margin: 0;
 }
 
@@ -57,13 +64,16 @@ ul {list-style-type: none;}
   width: 13.6%;
   text-align: center;
   margin-bottom: 5px;
-  font-size:12px;
-  color: #777;
+  font-size: 30px;
+  color: black;
+  font-weight: 600;
+  padding-bottom: 20px;
+  padding-top: 1px;
 }
 
 /* Highlight the event days */
 .days li .event {
   padding: 5px;
   background: #00b3b3;
-  color: white !important;
+  color: #e6ffff !important;
 }

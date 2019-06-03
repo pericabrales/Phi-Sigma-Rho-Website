@@ -3,6 +3,23 @@ body {
 	font-family: 'Amatic SC', cursive;
 }
 
+.error-container{
+	margin-top: 50px;
+	text-align: center;
+}
+
+.error-container h2{
+	margin: 10px 0;
+	font-size: 150px;
+	font-weight: 100;
+}
+
+.error-container h3{
+	margin: 10px 0;
+	font-size: 36px;
+	font-weight: 400;
+}
+
 .site-title {
 	font-family: 'Pacifico', cursive;
 	font-size: 65px;

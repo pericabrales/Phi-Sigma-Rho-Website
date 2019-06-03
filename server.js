@@ -17,16 +17,12 @@ app.get('/', function(req, res, next){
     res.status(200).render('homepage');
 });
 
-app.get('/#homepage', function(req, res, next){
-    res.status(200).render('homepage');
-});
-
-app.get('/#active', function(req, res, next){
+app.get('/active', function(req, res, next){
     res.status(200).render('activePhotos');
 });
 
-app.get('*', function (req, res) {
-  res.status(404).render('404Page');
+app.get('*', function (req, res, next) {
+  res.status(404).render('404');
 });
 
 app.listen(port, function (err) {

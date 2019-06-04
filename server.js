@@ -4,6 +4,7 @@ var exphbs = require('express-handlebars');
 var twitNumber;
 
 var sororityPhotos = require('./sororityPhotos');
+var activePhotos = require('./activePhotos');
 
 var app = express();
 var port = process.env.PORT || 3000;
@@ -23,6 +24,12 @@ app.get('/:type', function(req, res, next){
   var page = req.params.type.toLowerCase();
   if(sororityPhotos[page]){
     res.status(200).render('photoPages', sororityPhotos[page]);
+  }
+  else if(activePhotos[page]){
+    res.status(200).render('photoPageActives', activePhotos[page]);
+  }
+  else{
+    next();
   }
 });
 

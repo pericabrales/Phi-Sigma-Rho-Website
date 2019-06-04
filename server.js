@@ -20,10 +20,6 @@ app.get('/', function(req, res, next){
     res.status(200).render('homepage');
 });
 
-/*app.get('/active', function(req, res, next){
-    res.status(200).render('activePhotos');
-});*/
-
 app.get('/:type', function(req, res, next){
   var page = req.params.type.toLowerCase();
   if(sororityPhotos[page]){
@@ -39,7 +35,6 @@ app.get('/:type', function(req, res, next){
     next();
   }
 });
-
 
 app.get('/active/:type', function(req, res, next){
   var page = req.params.type.toLowerCase();

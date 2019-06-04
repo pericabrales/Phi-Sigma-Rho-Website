@@ -1,21 +1,8 @@
-<main class="photo-page">
-
-  <div class="title-container">
-    <h1>{{pageName}}</h1>
+<section class="photo-card">
+  <div class="img-container">
+    <img class="position-photo-img" src="{{url}}" />
   </div>
-
-  <div class-"class-title">
-    <h2>{{class}}</h2>
+  <div class="caption">
+    <a href="/people/{{@key}}" target= "_blank"> Register Here for Events </a>{{caption}}
   </div>
-
-  <!--loop through all of the photos that fit this page-->
-  <div class="photo-card-container">
-    {{#each photos}}
-      {{>photoCard}}
-    {{/each}}
-  </div>
-
-</main>
-
-<!--have the button pop up>
-{{>button}}-->
+</section>

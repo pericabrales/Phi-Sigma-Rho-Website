@@ -41,6 +41,14 @@ app.get('/:type', function(req, res, next){
 });
 
 
+app.get('/active/:type', function(req, res, next){
+  var page = req.params.type.toLowerCase();
+  if(activePhotos[page]){
+    res.status(200).render('photoPages', activePhotos[page]);
+  }
+});
+
+
 app.get('*', function (req, res, next) {
   res.status(404).render('404');
 });

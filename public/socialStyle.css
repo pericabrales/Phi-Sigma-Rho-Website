@@ -12,10 +12,11 @@
   text-decoration: none;
   margin: 5px 2px;
   border-radius: 50%;
-  background: #00b3b3;
-  color: #e6ffff;
+  background: #99ffcc;
+  color: #00b3b3;
   position: relative;
   top: 950px;
+  border: 1px solid #00b3b3;
 }
 
 .socials .fa:hover {

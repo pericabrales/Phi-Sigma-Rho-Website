@@ -23,6 +23,7 @@ app.get('/', function(req, res, next){
 app.get('/:type', function(req, res, next){
   var page = req.params.type.toLowerCase();
   /*if(page == "active"){
+    console.log("active page");
     res.status(200).render('photoPageActives', activePhotos[page]);
   }*/
   if(sororityPhotos[page]){

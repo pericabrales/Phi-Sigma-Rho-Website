@@ -15,11 +15,10 @@
         "url": "https://s3.amazonaws.com/cs-img/profile_pics/49062c56479de95281007e39b661119a16737420155cb6a793211112.12064995.png"
       },
       {
-<<<<<<< HEAD
         "caption": "Randi Shioi: Co-Recruitment and Co-Historian Chairs",
         "url": "https://s3.amazonaws.com/cs-img/profile_pics/31172342f42ae806ecce1410b629050020559150625cbd5e99b222b9.02834050.png"
-      }
-=======
+      },
+      {
         "caption": "Katelynn Thorn: VP of Philanthropy",
         "url": "https://s3.amazonaws.com/cs-img/profile_pics/bfff1c40d3a895803600ff49dac13bce3030683715cba4f3cc0be83.10078941.png"
       },
@@ -27,9 +26,7 @@
       "caption": "Peri Cabrales: Webmaster",
       "url": "https://s3.amazonaws.com/cs-img/profile_pics/bdfbebb49917b40b1dc2a2a3519c5a016812655785cb615c70fca24.89556802.png"
     }
->>>>>>> 941a45ad9894bb8633823d5196fa664801f0caf2
     ]
-
   },
 
   "potential":{
@@ -59,19 +56,19 @@
       "photos": [
         {
           "caption": "Rho Class",
-          "url": ""
+          "url": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/62084505_1526163137519586_5617341435280883712_n.jpg?_nc_cat=109&_nc_oc=AQmXJz9icAal3ox8F9dzvPq41cN5iXWucSMEfJBcgCyuri_pdMemU3aO0wYe9xvLqlY&_nc_ht=scontent-lax3-2.xx&oh=25bc1c681dba8787b7ba88fffe065e7e&oe=5D93FC28"
         },
         {
           "caption": "Sigma Class",
-          "url": ""
+          "url": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/61648623_1526162704186296_6380252425915203584_o.jpg?_nc_cat=108&_nc_oc=AQlZ0NF67VEmhIWF4fmWzhQ3kSV5CUU4kSjo4zadBh77vMWoGu6Z1VL-nnnwDofIzXw&_nc_ht=scontent-lax3-2.xx&oh=8891c90611e9b33e785f0aeb5f73eb06&oe=5D88565A"
         },
         {
           "caption": "Tau Class",
-          "url": ""
+          "url": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/61910127_1526163594186207_8001481719775494144_o.jpg?_nc_cat=111&_nc_oc=AQle2ehR3UykRq1bV0YVb8mZU57ZTI7AFAQ681zbgnsp7xPXclM2DyG0YYcYoP6Enf0&_nc_ht=scontent-lax3-2.xx&oh=235c400c4625e777e7b2cec56f543f3f&oe=5D511F11"
         },
         {
           "caption": "Upsilon Class",
-          "url": ""
+          "url": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/61670560_1526164217519478_3271836619291754496_o.jpg?_nc_cat=111&_nc_oc=AQmO_BoyAWhp5PLUcfzmb6--hnAZG8rVtQ4k9FzcVs_Mm3BkClJkqmO0fMMhzlNGE5o&_nc_ht=scontent-lax3-2.xx&oh=dd1afd4516c9fab8164c80b0837afc33&oe=5D931D11"
         }
       ]
     }

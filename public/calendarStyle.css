@@ -78,6 +78,16 @@ ul {list-style-type: none;}
   color: #e6ffff !important;
 }
 
+.column{
+  padding: 5px;
+  height: 400px;
+}
+
+.homePics{
+  align-items: center;
+  display: flex;
+}
+
 .register{
   font-size: 40px;
   text-align: center;

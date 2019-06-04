@@ -9,7 +9,7 @@ ul {list-style-type: none;}
 
 .calendar{
   position: relative;
-  top: 10px;
+  bottom: 90px;
   margin: 40px;
 }
 

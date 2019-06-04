@@ -4,10 +4,10 @@ var exphbs = require('express-handlebars');
 var twitNumber;
 
 var sororityPhotos = require('./sororityPhotos');
-//var activePhotos = require('./activePhotos');
+var activePhotos = require('./activePhotos');
 
 var app = express();
-var port = process.env.PORT || 3010;
+var port = process.env.PORT || 3000;
 
 
 
@@ -27,6 +27,13 @@ app.get('/:type', function(req, res, next){
   }
   else{
     next();
+  }
+});
+
+app.get('/active/:type', function(req, res, next){
+  var page = req.params.type.toLowerCase();
+  if(activePhotos[page]){
+    res.status(200).render('photoPages', activePhotos[page]);
   }
 });
 

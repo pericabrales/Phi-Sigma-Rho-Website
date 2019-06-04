@@ -7,7 +7,7 @@ var sororityPhotos = require('./sororityPhotos');
 var activePhotos = require('./activePhotos');
 
 var app = express();
-var port = process.env.PORT || 3010;
+var port = process.env.PORT || 3000;
 
 
 
@@ -31,6 +31,9 @@ app.get('/:type', function(req, res, next){
   }
   else if(activePhotos[page]){
     res.status(200).render('photoPages', activePhotos[page]);
+  }
+  else if(page == "about"){
+    res.status(200).render('aboutPage');
   }
   else{
     next();

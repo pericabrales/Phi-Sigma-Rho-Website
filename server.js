@@ -4,7 +4,7 @@ var exphbs = require('express-handlebars');
 var twitNumber;
 
 var sororityPhotos = require('./sororityPhotos');
-//var activePhotos = require('./activePhotos');
+var activePhotos = require('./activePhotos');
 
 var app = express();
 var port = process.env.PORT || 3000;

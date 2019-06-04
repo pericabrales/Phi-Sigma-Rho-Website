@@ -22,11 +22,11 @@ app.get('/', function(req, res, next){
 
 app.get('/:type', function(req, res, next){
   var page = req.params.type.toLowerCase();
-  /*if(page == "active"){
+  if(page == "active"){
     console.log("active page");
-    res.status(200).render('photoPageActives', activePhotos[page]);
-  }*/
-  if(sororityPhotos[page]){
+    res.status(200).render('photoPageActives', sororityPhotos[page]);
+  }
+  else if(sororityPhotos[page]){
     res.status(200).render('photoPages', sororityPhotos[page]);
   }
   else if(activePhotos[page]){
@@ -43,7 +43,7 @@ app.get('/:type', function(req, res, next){
 app.get('/active/:type', function(req, res, next){
   var page = req.params.type.toLowerCase();
   if(activePhotos[page]){
-    res.status(200).render('photoPages', activePhotos[page]);
+    res.status(200).render('photoPageActives', activePhotos[page]);
   }
 });
 

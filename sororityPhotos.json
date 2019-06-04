@@ -11,12 +11,12 @@
         "url":"https://s3.amazonaws.com/cs-img/profile_pics/3987768a9f5142c7d38504235c9da7632709361125cb691b95ce064.20948821.png"
       },
       {
-        "caption": "Brynn DeVaan: Co-VP of Social",
-        "url": "https://s3.amazonaws.com/cs-img/profile_pics/31172342f42ae806ecce1410b629050020559150625cbd5e99b222b9.02834050.png"
-      },
-      {
         "caption": "Natasha Troxler: Co-VP of Social",
         "url": "https://s3.amazonaws.com/cs-img/profile_pics/49062c56479de95281007e39b661119a16737420155cb6a793211112.12064995.png"
+      },
+      {
+        "caption": "Randi Shioi: Co-Recruitment and Co-Historian Chairs",
+        "url": "https://s3.amazonaws.com/cs-img/profile_pics/31172342f42ae806ecce1410b629050020559150625cbd5e99b222b9.02834050.png"
       }
     ]
 
@@ -26,26 +26,43 @@
     "pageName": "Potential Bigs",
     "photos": [
       {
-        "caption": "",
-        "url": ""
+        "caption": "Gabriela Griffin",
+        "url": "https://s3.amazonaws.com/cs-img/profile_pics/f54a414fdc6b5afa2473b190b5670b645471925345ccdece3cc2500.70652064.png"
       },
       {
-        "caption": "",
-        "url": ""
+        "caption": "Alex Saccente",
+        "url": "https://s3.amazonaws.com/cs-img/profile_pics/616d105a932d50f3fda408afd3db241f7833748785cc713a19347b1.16675305.png"
       },
       {
-        "caption": "",
-        "url": ""
+        "caption": "Brynn DeVaan",
+        "url": "https://s3.amazonaws.com/cs-img/profile_pics/31172342f42ae806ecce1410b629050020559150625cbd5e99b222b9.02834050.png"
       },
       {
-        "caption": "",
-        "url": ""
-      },
-      {
-        "caption": "",
-        "url": ""
+        "caption": "Natalie White",
+        "url": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/38872091_545117469236369_5978708679212400640_n.jpg?_nc_cat=104&_nc_oc=AQmKqW4qpCVCLI95xmLRBw8Fuf-jtHFelZuA1QvoXzRXymyszDntwdpU43o1wzOJ8aE&_nc_ht=scontent-lax3-2.xx&oh=4d2346cb4bbee1fb4145eee2eb97b761&oe=5D9D01BD"
       }
     ]
-  }
+  },
 
+    "active":{
+      "pageName": "Active Members",
+      "photos": [
+        {
+          "caption": "Rho Class",
+          "url": ""
+        },
+        {
+          "caption": "Sigma Class",
+          "url": ""
+        },
+        {
+          "caption": "Tau Class",
+          "url": ""
+        },
+        {
+          "caption": "Upsilon Class",
+          "url": ""
+        }
+      ]
+    }
 }

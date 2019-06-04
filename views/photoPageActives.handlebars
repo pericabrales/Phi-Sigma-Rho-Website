@@ -1,0 +1,17 @@
+<main class="photo-page">
+
+  <div class="title-container">
+    <h1>{{pageName}}</h1>
+  </div>
+
+  <!--loop through all of the photos that fit this page -->
+  <div class="photo-card-container">
+    {{#each photos}}
+      {{>photoCardActives}}
+    {{/each }}
+  </div>
+
+</main>
+
+<!--have the button pop up
+  {{>button}}-->

@@ -46,32 +46,6 @@
         "url": ""
       }
     ]
-  },
-
-  "active":{
-    "pageNames": "Active Members",
-    "photos": [
-      {
-        "caption": "",
-        "url": ""
-      },
-      {
-        "caption": "",
-        "url": ""
-      },
-      {
-        "caption": "",
-        "url": ""
-      },
-      {
-        "caption": "",
-        "url": ""
-      },
-      {
-        "caption": "",
-        "url": ""
-      }
-    ]
   }
 
 }

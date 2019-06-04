@@ -1,5 +1,5 @@
 {
-  "positions":{
+  "members":{
     "pageName": "Members with Positions",
     "photos": [
       {
@@ -22,7 +22,7 @@
 
   },
 
-  "bigs":{
+  "potential":{
     "pageName": "Potential Bigs",
     "photos": [
       {
@@ -48,7 +48,7 @@
     ]
   },
 
-  "actives":{
+  "active":{
     "pageNames": "Active Members",
     "photos": [
       {

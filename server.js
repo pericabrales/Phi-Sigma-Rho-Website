@@ -3,6 +3,8 @@ var express = require('express');
 var exphbs = require('express-handlebars');
 var twitNumber;
 
+var sororityPhotos = require('./sororityPhotos');
+
 var app = express();
 var port = process.env.PORT || 3000;
 
@@ -17,9 +19,12 @@ app.get('/', function(req, res, next){
     res.status(200).render('homepage');
 });
 
-/*app.get('/active', function(req, res, next){
-    res.status(200).render('activePhotos');
-});*/
+app.get('/:type', function(req, res, next){
+  var page = req.params.type.toLowerCase();
+  if(sororityPhotos[page]){
+    res.status(200).render('photoPages', sororityPhotos[page]);
+  }
+});
 
 app.get('*', function (req, res, next) {
   res.status(404).render('404');

@@ -17,6 +17,10 @@ app.get('/', function(req, res, next){
     res.status(200).render('homepage');
 });
 
+app.get('/about', function(req, res, next){
+    res.status(200).render('aboutPage');
+});
+
 /*app.get('/active', function(req, res, next){
     res.status(200).render('activePhotos');
 });*/

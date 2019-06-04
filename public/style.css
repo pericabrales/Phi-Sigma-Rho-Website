@@ -141,3 +141,37 @@ body {
 .dropdown:hover .dropdown-content {
 	display: block;
 }
+
+.photo-card-container  {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+	margin: 10px;
+	position: relative;
+	bottom: 55px;
+}
+
+.photo-card {
+	flex: 1 32%;
+	background-color: #99ffff;
+	border: 2px dotted #00b3b3;
+	padding: 10px;
+	text-align: center;
+	margin: 20px;
+}
+
+.position-photo-img {
+	max-height: 300px;
+	position: relative;
+	top: 10px;
+}
+
+.caption {
+	font-size: 35px;
+}
+
+.title-container h1 {
+	text-align: center;
+  font-size: 60px;
+	font-weight: 200;
+}

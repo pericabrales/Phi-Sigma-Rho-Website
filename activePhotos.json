@@ -1,32 +1,137 @@
 {
-  "active":{
-    "pageNames": "Active Members",
-    "photos": [
-      {
-        "class": "",
-        "caption": "",
-        "url": ""
-      },
-      {
-        "class": "",
-        "caption": "",
-        "url": ""
-      },
-      {
-        "class": "",
-        "caption": "",
-        "url": ""
-      },
-      {
-        "class": "",
-        "caption": "",
-        "url": ""
-      },
-      {
-        "class": "",
-        "caption": "",
-        "url": ""
-      }
-    ]
-  }
+    "rho":{
+      "pageName": "Active Members: Rho Class",
+      "photos": [
+        {
+          "caption": "Abigail Valentine",
+          "url": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/44892779_2478107422215995_788096824886951936_n.jpg?_nc_cat=109&_nc_oc=AQlblVr4RSHl-qd9Ye0X4eouAoPXDu8LR-qq9zx9JweSbnGLBCb6uHTx73gyvylabG8&_nc_ht=scontent-lax3-2.xx&oh=2962521965b82134044a4bb0d86cd1cd&oe=5D91ED1B"
+        },
+        {
+          "caption": "Uma Annamalai",
+          "url": "https://scontent-lax3-2.cdninstagram.com/vp/03c9fe7cd65d2e9195e403caad23927e/5D867A31/t51.2885-19/s150x150/62023613_380274619247706_6434569472853409792_n.jpg?_nc_ht=scontent-lax3-2.cdninstagram.com"
+        },
+        {
+          "caption": "Morgan Mayer",
+          "url": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/45079393_2115368345174454_2973213268392280064_n.jpg?_nc_cat=109&_nc_oc=AQmWa6HeIVy-ZVtc1O1wj8Lo5ugxLMXZiACBAz0JS8ZbWPxYc-V7UmwHZz4yprLPUwI&_nc_ht=scontent-lax3-2.xx&oh=72b4b02f15102898804805a0aef31252&oe=5D540A7B"
+        },
+        {
+          "caption": "Mila Bakker",
+          "url": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/43567183_1883092588472129_3926217772085805056_n.jpg?_nc_cat=105&_nc_oc=AQnbcWB70SbmLXmneNJ-jUAcBw0Z8FgVdSn1m3UF6ghjMk-mbudLJK4b80ZDnr2aaBI&_nc_ht=scontent-lax3-2.xx&oh=524d49cc897ef9c355cc49f937c8288c&oe=5D99AF28"
+        },
+        {
+          "caption": "Kylie Havemann",
+          "url": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/56592002_2330338607016632_430131680385171456_n.jpg?_nc_cat=103&_nc_oc=AQkw57v8ALwvwf7vuekwCjQb2LP64qTBsjnYDpi5D5sDuRdR19PYlQbWcFox3MslUps&_nc_ht=scontent-lax3-2.xx&oh=641bb76d30ee746b6b91da54a119133e&oe=5D9ACAC4"
+        },
+        {
+          "caption": "Josie Thomas",
+          "url": "https://scontent-lax3-2.xx.fbcdn.net/v/t31.0-8/14444622_711028949049227_3316134961988637795_o.jpg?_nc_cat=108&_nc_oc=AQnBSGbvL73Z_ydYlckCJbH-a_wovLVMZlk8pHuTemLOe_PKafbzqR1xT6i5Jb3Llk0&_nc_ht=scontent-lax3-2.xx&oh=2a64e5eb86edd30aad457a3403020f0b&oe=5D86B093"
+        },
+        {
+          "caption": "Illiana Javier",
+          "url": "https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/27973301_658582001139444_6700986699034775677_n.jpg?_nc_cat=108&_nc_oc=AQlUny9LMXr-pfsF0DOGDdMv0BcxDotgNZIjc8sEMhtjYvA0YfiAjwPs5uYmkI8ghKY&_nc_ht=scontent-lax3-2.xx&oh=1c0e7adc595d092b78c2acfe7053abfb&oe=5D548AA0"
+        }
+      ]
+    },
+
+    "sigma":{
+      "pageName": "Active Members: Sigma Class",
+      "photos":[
+        {
+          "caption": "Amanda Crawford",
+          "url": ""
+        },
+        {
+          "caption": "Mckenzie Foster",
+          "url": ""
+        },
+        {
+          "caption": "Jorie Cheng-Leever",
+          "url": ""
+        },
+        {
+          "caption": "Madison Felix",
+          "url": ""
+        },
+        {
+          "caption": "Haley McGeorge",
+          "url": ""
+        },
+        {
+          "caption": "Marissa Bertuccio",
+          "url": ""
+        },
+        {
+          "caption": "Randi Shioi",
+          "url": ""
+        }
+      ]
+    },
+
+    "tau":{
+      "pageName": "Active Members: Tau Class",
+      "photos": [
+        {
+          "caption": "Peri Cabrales",
+          "url": ""
+        },
+        {
+          "caption": "Audrey Concepcion",
+          "url": ""
+        },
+        {
+          "caption": "Kate Galle",
+          "url": ""
+        },
+        {
+          "caption": "Heidi Reed",
+          "url": ""
+        },
+        {
+          "caption": "Lauren Galle",
+          "url": ""
+        },
+        {
+          "caption": "Katelynn Thorn",
+          "url": ""
+        },
+        {
+          "caption": "Sneha Shah",
+          "url": ""
+        },
+      ]
+    },
+
+    "upsilon":{
+      "pageName": "Active Members: Upsilon Class",
+      "photos": [
+        {
+          "caption": "Abigaya Bekele",
+          "url": ""
+        },
+        {
+          "caption": "Brynn DeVaan",
+          "url": ""
+        },
+        {
+          "caption": "Emily Forsman",
+          "url": ""
+        },
+        {
+          "caption": "Katelin Godwin",
+          "url": ""
+        },
+        {
+          "caption": "Gabriela Griffin",
+          "url": ""
+        },
+        {
+          "caption": "Ariel Harmon",
+          "url": ""
+        },
+        {
+          "caption": "Kylie Higaki",
+          "url": ""
+        }
+      ]
+    }
 }

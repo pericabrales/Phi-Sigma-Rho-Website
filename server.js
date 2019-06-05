@@ -7,7 +7,7 @@ var sororityPhotos = require('./sororityPhotos');
 var activePhotos = require('./activePhotos');
 
 var app = express();
-var port = process.env.PORT || 3010;
+var port = process.env.PORT || 3000;
 
 
 

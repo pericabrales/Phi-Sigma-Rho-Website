@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "handlebars views/partials/photoCard.handlebars -f public/photoCardTemplate.js",
-    "build": "handlebars views/partials/modal.handlebars -f public/modalTemplate.js",
-    "dev": "nodemon server.js",
+    "build": "npm run build-photos && npm run build-modal",
+    "build-photos": "handlebars views/partials/photoCard.handlebars -f public/photoCardTemplate.js",
+    "build-modal": "handlebars views/partials/modal.handlebars -f public/modalTemplate.js",
     "prestart": "npm run build"
   },
   "repository": {

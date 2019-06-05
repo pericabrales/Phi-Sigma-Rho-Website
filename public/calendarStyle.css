@@ -78,7 +78,7 @@ ul {list-style-type: none;}
   color: #e6ffff !important;
 }
 
-#cookies-modal-backdrop {
+#modal-backdrop {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -88,7 +88,7 @@ ul {list-style-type: none;}
   background-color: rgba(0, 0, 0, 0.85);
 }
 
-#cookies-open-modal {
+#open-modal {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -122,7 +122,7 @@ ul {list-style-type: none;}
   font-size: 28px;
 }
 
-.modal-close-button {
+#modal-close-button {
   position: absolute;
   right: 10px;
   top: 5px;

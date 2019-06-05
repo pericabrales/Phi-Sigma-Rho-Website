@@ -151,13 +151,24 @@ body {
 	bottom: 55px;
 }
 
-.photo-card {
+
+.photo-card-actives-container .photo-card {
 	flex: 1 32%;
 	background-color: #99ffff;
 	border: 2px dotted #00b3b3;
 	padding: 10px;
 	text-align: center;
 	margin: 20px;
+}
+
+.photo-card {
+	background-color: #99ffff;
+	border: 2px dotted #00b3b3;
+	padding: 10px;
+	text-align: center;
+	margin: 20px;
+	flex: 1 27%;
+
 }
 
 .position-photo-img {

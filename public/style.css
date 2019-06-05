@@ -211,3 +211,19 @@ body {
 .photo-card-actives-container .caption a:hover{
   color: #00b3b3;
 }
+
+#add-photo-button{
+	position: fixed;
+	right: 40px;
+	/*left: 1400px;*/
+	top: 280px;
+	/*bottom: 970px;*/
+	height: 70px;
+	width: 70px;
+	border: none;
+	border-radius: 50%;
+	font-size: 40px;
+	background-color: #e6ffff;
+	color: #f797e4;
+	cursor: pointer;
+}

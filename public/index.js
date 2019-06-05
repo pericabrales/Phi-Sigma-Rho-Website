@@ -39,6 +39,39 @@
   });
 
 
+//Stuff for inserting photo and getting the windows to pop up when the buttons are pushed
+  //insert a new photo
+  function insertNewPhoto(photoUrl, photoCaption){
+    var photo = {
+      url: photoUrl,
+      caption: photoCaption
+    };
+
+    var photoCompile = Handlebars.templates.photoCard(photo);
+    var photoCont = document.querySelector('.photo-page');
+    photoCont.insertAdjacentHTML('beforeend', photoCompile);
+
+  };
+
+  //show the create photo window
+  function showPhotoWindow(){
+      var windowBackground = document.getElementById('window-backdrop');
+      var photoWindow = document.getElementById('add-photo-window');
+
+      //unhide the add photo window and the background
+      windowBackground.classList.remove('hidden');
+      photoWindow.classList.remove('hidden');
+  }
+
+  function hidePhotoWindow(){
+    var windowBackground = document.getElementById('window-backdrop');
+    var photoWindow = document.getElementById('add-photo-window');
+
+    //hide the add photo window and the background
+    windowBackground.classList.add('hidden');
+    photoWindow.classList.add('hidden');
+  }
+
   /*if cancel button clicked or no input, then close the modal*/
 /*
   function closeModal(){

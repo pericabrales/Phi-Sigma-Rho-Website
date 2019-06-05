@@ -1,13 +1,13 @@
 var path = require('path');
 var express = require('express');
 var exphbs = require('express-handlebars');
-var twitNumber;
+//var twitNumber;
 
 var sororityPhotos = require('./sororityPhotos');
 var activePhotos = require('./activePhotos');
 
 var app = express();
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3010;
 
 
 

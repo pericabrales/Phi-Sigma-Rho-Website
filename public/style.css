@@ -229,9 +229,34 @@ body {
 	cursor: pointer;
 }
 
-#add-photo-button:hover{
+#add-photo-button:hover,
+#add-photo-button:focus{
 	background-color:#f797e4;
 	color: white;
 	transform scale(1.1);
 	cursor: pointer;
+}
+
+#add-photo-button:focus{
+	outline: none;
+}
+
+#window-backdrop{
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1000px;
+	background-color: #e7e7e7;
+}
+
+#add-photo-window{
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1010px;
+	overflow: scroll;
 }

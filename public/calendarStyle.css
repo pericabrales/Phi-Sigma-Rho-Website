@@ -86,7 +86,8 @@ ul {list-style-type: none;}
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color:#99ffff;
+  opacity: 0.6;
 }
 
 #open-modal {
@@ -103,24 +104,27 @@ ul {list-style-type: none;}
   display: none;
 }
 
-.modal-text{
+.modal-text {
   width: auto;
+  font-size: 50px;
   max-width: 600px;
   min-width: 350px;
   min-height: 300px;
   margin: 40px auto;
-  background-color: #fff;
+  background-color: #99ffcc;
   border-radius: 15px;
+  border: 1px solid black;
 }
 
 .modal-header {
   position: relative;
+  text-align: center;
   padding: 10px 20px;
 }
-
 .modal-header h3 {
   margin: 0;
-  font-size: 28px;
+  font-size: 70px;
+  font-weight: 100;
 }
 
 #modal-close-button {

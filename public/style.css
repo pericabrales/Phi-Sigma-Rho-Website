@@ -149,6 +149,7 @@ body {
 	margin: 10px;
 	position: relative;
 	bottom: 55px;
+	justify-content: center;
 }
 
 
@@ -167,9 +168,9 @@ body {
 	padding: 10px;
 	text-align: center;
 	margin: 20px;
-	flex: 1 27%;
-
+	min-width: 25%;
 }
+
 
 .position-photo-img {
 	max-height: 300px;

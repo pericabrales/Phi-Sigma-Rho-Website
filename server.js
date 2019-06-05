@@ -23,7 +23,7 @@ app.get('/', function(req, res, next){
 app.get('/:type', function(req, res, next){
   var page = req.params.type.toLowerCase();
   if(page == "active"){
-    console.log("active page");
+    //don't let the button be displayed on this page
     res.status(200).render('photoPageActives', sororityPhotos[page]);
   }
   else if(sororityPhotos[page]){

@@ -215,19 +215,21 @@ body {
 
 #add-photo-button{
 	/* make button not move up and down with the slide bar somehow*/
-	position: fixed;
-	right: 40px;
+	display: inline;
+	float: right;
 	/*left: 1400px;*/
-	top: 280px;
-	/*bottom: 970px;*/
-	height: 70px;
-	width: 70px;
+	position: absolute;
+	bottom: 525px;
+	right:  30px;
+	height: 80px;
+	width: 80px;
 	border: none;
 	border-radius: 50%;
 	font-size: 40px;
-	background-color: #e7e7e7;
+	background-color: white;
 	color: #f797e4;
 	cursor: pointer;
+	border: 1px solid #f797e4;
 }
 
 #add-photo-button:hover,
@@ -236,6 +238,7 @@ body {
 	color: white;
 	transform scale(1.1);
 	cursor: pointer;
+	border: 1px solid white;
 }
 
 #add-photo-button:focus{

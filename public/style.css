@@ -213,6 +213,7 @@ body {
 }
 
 #add-photo-button{
+	/* make button not move up and down with the slide bar somehow*/
 	position: fixed;
 	right: 40px;
 	/*left: 1400px;*/
@@ -223,7 +224,14 @@ body {
 	border: none;
 	border-radius: 50%;
 	font-size: 40px;
-	background-color: #e6ffff;
+	background-color: #e7e7e7;
 	color: #f797e4;
+	cursor: pointer;
+}
+
+#add-photo-button:hover{
+	background-color:#f797e4;
+	color: white;
+	transform scale(1.1);
 	cursor: pointer;
 }

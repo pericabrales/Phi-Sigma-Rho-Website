@@ -54,23 +54,24 @@
   };
 
   //show the create photo window
-  function showPhotoWindow(){
-      var windowBackground = document.getElementById('window-backdrop');
-      var photoWindow = document.getElementById('add-photo-window');
-
-      //unhide the add photo window and the background
-      windowBackground.classList.remove('hidden');
-      photoWindow.classList.remove('hidden');
-  }
-
-  function hidePhotoWindow(){
+  var addPhotoButton = document.querySelector('#add-photo-button');
+  addPhotoButton.addEventListener('click', function(event){
     var windowBackground = document.getElementById('window-backdrop');
     var photoWindow = document.getElementById('add-photo-window');
+    //unhide the add photo window and the background
+    windowBackground.classList.remove('hidden');
+    photoWindow.classList.remove('hidden');
+  });
 
+  //cloe the window
+  var windowClose = document.querySelector('#window-close-button');
+  windowClose.addEventListener('click', function(event){
+    var windowBackground = document.getElementById('window-backdrop');
+    var photoWindow = document.getElementById('add-photo-window');
     //hide the add photo window and the background
     windowBackground.classList.add('hidden');
     photoWindow.classList.add('hidden');
-  }
+  });
 
   /*if cancel button clicked or no input, then close the modal*/
 /*

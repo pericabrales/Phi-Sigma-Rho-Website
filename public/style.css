@@ -175,3 +175,28 @@ body {
   font-size: 60px;
 	font-weight: 200;
 }
+
+.photo-card-actives-container  {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+	margin: 10px;
+	position: relative;
+	bottom: 55px;
+}
+
+.photo-card-actives-container .caption{
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  top: 10px;
+  color: black;
+}
+
+.photo-card-actives-container .caption a{
+  color: black;
+}
+
+.photo-card-actives-container .caption a:hover{
+  color: #00b3b3;
+}

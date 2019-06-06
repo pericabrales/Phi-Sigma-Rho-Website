@@ -93,7 +93,23 @@
     caption.value = '';
   });
 
+  //add photo winidow button
+  var acceptButton = document.getElementById('window-accept');
+  acceptButton.addEventListener('click', function(event){
+    //add a call to a function that creates the twit and sends it to memory
 
+    //close and delete everything like above
+    var windowBackground = document.getElementById('window-backdrop');
+    var photoWindow = document.getElementById('add-photo-window');
+    //hide the add photo window and the background
+    windowBackground.classList.add('hidden');
+    photoWindow.classList.add('hidden');
+    //delete the stuff within the fields
+    var url = document.getElementById('photo-url');
+    url.value = '';
+    var caption = document.getElementById('photo-caption');
+    caption.value = '';
+  });
 
   /*if cancel button clicked or no input, then close the modal*/
 /*

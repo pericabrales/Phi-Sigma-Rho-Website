@@ -255,6 +255,7 @@ body {
   color: #00b3b3;
 }
 
+/*add photo button*/
 #add-photo-button{
 	display: inline;
 	position: relative;
@@ -292,7 +293,7 @@ body {
 	left: 0px;
 	right: 0px;
 	z-index: 1000px;
-	background-color: #e7e7e7;
+	background-color: rgba(0,0,0,0.8);
 }
 
 #add-photo-window{
@@ -310,7 +311,7 @@ body {
 }
 
 .window-action-button{
-	font-size: 20px;
+	font-size: 15px;
 	color: white;
 	padding: 10px;
 	background-color: black;
@@ -327,7 +328,7 @@ body {
 
 .window-dialog{
 	width: auto;
-	max-width: 500px;
+	max-width: 600px;
 	min-width: 300px;
 	min-height: 300px;
 	max-height: 500px;
@@ -335,4 +336,62 @@ body {
 	margin: 40px auto;
 	background-color: white;
 	border-radius: 20px;
+}
+
+.window-header{
+	position: relative;
+	padding: 15px 25px;
+}
+
+.window-header h3{
+	margin: 0px;
+	font-size: 40px;
+}
+
+#window-close{
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	font-size: 20px;
+	border: none;
+	cursor: pointer;
+}
+
+#window-close:focus{
+	outline: none;
+}
+
+.photo-input-element{
+	display: flex;
+	align-items: center;
+	font-size: 23px;
+	margin: 10px 0;
+}
+
+.photo-input-element > label{
+	font-weight: normal;
+	flex: 1 75px;
+	margin-right: 20px;
+	border: 4px;
+}
+
+.photo-input-element input{
+	flex: 6 200px;
+	padding: 10px;
+	font-size: 20px;
+	border: 2px solid #d3d3d3;
+}
+
+.window-footer{
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px 10px 10px 10px;
+}
+
+#window-cancel, #window-accept{
+	margine-left: 25px;
+}
+
+#window-cancel, #window-accept:focus{
+	outline: none;
 }

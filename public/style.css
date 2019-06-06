@@ -255,10 +255,11 @@ body {
 
 #add-photo-button{
 	display: inline;
+	position: relative;
 	float: right;
-	position: absolute;
-	bottom: 525px;
-	right:  30px;
+	/*position: absolute;*/
+	top: -80px;
+	right:  40px;
 	height: 70px;
 	width: 70px;
 	border: none;

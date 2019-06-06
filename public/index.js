@@ -63,15 +63,27 @@
     photoWindow.classList.remove('hidden');
   });
 
-  //cloe the window
-  var windowClose = document.querySelector('#window-close-button');
-  windowClose.addEventListener('click', function(event){
+  //cloe the window with the x
+  var windowClose1 = document.querySelector('#window-close');
+  windowClose1.addEventListener('click', function(event){
     var windowBackground = document.getElementById('window-backdrop');
     var photoWindow = document.getElementById('add-photo-window');
     //hide the add photo window and the background
     windowBackground.classList.add('hidden');
     photoWindow.classList.add('hidden');
   });
+
+  //close the window with the cancel button
+  var windowClose2 = document.querySelector('#window-cancel');
+  windowClose2.addEventListener('click', function(event){
+    var windowBackground = document.getElementById('window-backdrop');
+    var photoWindow = document.getElementById('add-photo-window');
+    //hide the add photo window and the background
+    windowBackground.classList.add('hidden');
+    photoWindow.classList.add('hidden');
+  });
+
+
 
   /*if cancel button clicked or no input, then close the modal*/
 /*

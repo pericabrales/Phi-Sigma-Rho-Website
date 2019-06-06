@@ -323,7 +323,6 @@ body {
 
 .window-action-button:hover{
 	background-color: #f6c3f0;
-	border-color: black;
 }
 
 .window-dialog{
@@ -355,6 +354,10 @@ body {
 	font-size: 20px;
 	border: none;
 	cursor: pointer;
+}
+
+#window-close:hover{
+	background-color: #f6c3f0;
 }
 
 #window-close:focus{

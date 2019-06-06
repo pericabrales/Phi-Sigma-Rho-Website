@@ -217,7 +217,6 @@ body {
 	display: inline;
 	position: relative;
 	float: right;
-	/*position: absolute;*/
 	top: -80px;
 	right:  40px;
 	height: 70px;
@@ -243,6 +242,7 @@ body {
 	outline: none;
 }
 
+//add photo window background
 #window-backdrop{
 	position: fixed;
 	top: 0px;

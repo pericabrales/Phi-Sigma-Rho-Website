@@ -63,6 +63,10 @@
     photoWindow.classList.remove('hidden');
   });
 
+  //variable that get what is in the text fields
+  var url = document.getElementById('photo-url');
+  var caption = document.getElementById('photo-caption');
+
   //cloe the window with the x
   var windowClose1 = document.querySelector('#window-close');
   windowClose1.addEventListener('click', function(event){
@@ -72,9 +76,7 @@
     windowBackground.classList.add('hidden');
     photoWindow.classList.add('hidden');
     //delete the stuff within the fields
-    var url = document.getElementById('photo-url');
     url.value = '';
-    var caption = document.getElementById('photo-caption');
     caption.value = '';
   });
 
@@ -87,53 +89,31 @@
     windowBackground.classList.add('hidden');
     photoWindow.classList.add('hidden');
     //delete the stuff within the fields
-    var url = document.getElementById('photo-url');
     url.value = '';
-    var caption = document.getElementById('photo-caption');
     caption.value = '';
   });
 
   //add photo winidow button
   var acceptButton = document.getElementById('window-accept');
   acceptButton.addEventListener('click', function(event){
-    //add a call to a function that creates the twit and sends it to memory
+    //wont go through unless both fields are filled
+    if(url.value && caption.value){
+      //close and delete everything like above
+      var windowBackground = document.getElementById('window-backdrop');
+      var photoWindow = document.getElementById('add-photo-window');
+      //hide the add photo window and the background
+      windowBackground.classList.add('hidden');
+      photoWindow.classList.add('hidden');
+      //add a call to a function that creates the twit and sends it to memory
 
-    //close and delete everything like above
-    var windowBackground = document.getElementById('window-backdrop');
-    var photoWindow = document.getElementById('add-photo-window');
-    //hide the add photo window and the background
-    windowBackground.classList.add('hidden');
-    photoWindow.classList.add('hidden');
-    //delete the stuff within the fields
-    var url = document.getElementById('photo-url');
-    url.value = '';
-    var caption = document.getElementById('photo-caption');
-    caption.value = '';
+
+      //delete the stuff within the fields
+      url.value = '';
+      caption.value = '';
+    }
+    else{
+      alert("You must put both a url and a caption");
+    }
   });
 
-  /*if cancel button clicked or no input, then close the modal*/
-/*
-  function closeModal(){
-    var modal = document.querySelector("#cookies-open-modal");
-    var backdrop = document.querySelector("#cookies-modal-backdrop");
-    console.log("x button clicked");
-    modal.style.display = "none"; /*do not show if clicked*/
-//    backdrop.style.display= "none"; /*do not show if clicked*/
-//  }
-/*
-  var close= document.querySelector(".modal-close-button");
-    if(close){
-      close.addEventListener("click", function(){
-        closeModal();
-      });
-    }
-
-  var open=document.querySelector("#cookies-open-button");
-  if(open){
-    open.addEventListener("click", function(){
-      cookiesCreate();
-    });
-  }
-});
-}
-*/
+  //get the information from the fields

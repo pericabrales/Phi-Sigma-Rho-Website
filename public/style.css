@@ -37,24 +37,64 @@ body {
 	border: 5px solid #00b3b3;
 }
 
-.aboutPage p{
-	font-size: 24px;
+.aboutPage .national{
+	font-size: 32px;
+	font-weight: 600;
 }
 
-.aboutPage li{
-	list-style-type: circle;
-	display: inline;
-	padding: 10px;
-	font-size: 20px;
-	font-weight: 600px;
+.national a{
+	color: black;
+}
+
+.national a:hover{
 	color: #00b3b3;
 }
 
-.national{
-	font-size: 32px;
-	font-weight: 300px;
+.aboutPage p{
+	font-size: 30px;
+	margin: 40px;
+}
+
+.about-container{
+		background: radial-gradient(#ffffff 15%,transparent 16%) 0 0,
+		radial-gradient(#ffffff 15%,transparent 16%) 8px 8px,
+		radial-gradient(rgba(255,255,255,0.05) 15%,transparent 20%) 0 1px,
+		radial-gradient(rgba(255,255,255,0.05) 15%,transparent 20%) 8px 9px;
+		background-size: 16px 16px;
+		background-color: #99ffcc;
+		height: 940px;
 
 }
+
+.aboutPage h3{
+	font-size: 40px;
+}
+
+.contain{
+	display: inline-block;
+}
+
+.btn{
+	border-radius: 50%;
+	background-color: #e6ffff;
+	padding: 40px 40px;
+  font-size: 30px;
+	display: inline-block;
+	margin-left: 80px;
+	margin-right: 80px;
+	font-family: 'Amatic SC', cursive;
+	font-weight: 600;
+}
+
+.motto{
+	border: 1px solid #00b3b3;
+}
+
+.flower{
+	border: 1px solid black;
+}
+
+
 
 .site-title {
 	font-family: 'Pacifico', cursive;

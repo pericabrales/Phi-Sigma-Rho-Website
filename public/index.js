@@ -71,6 +71,11 @@
     //hide the add photo window and the background
     windowBackground.classList.add('hidden');
     photoWindow.classList.add('hidden');
+    //delete the stuff within the fields
+    var url = document.getElementById('photo-url');
+    url.value = '';
+    var caption = document.getElementById('photo-caption');
+    caption.value = '';
   });
 
   //close the window with the cancel button
@@ -81,6 +86,11 @@
     //hide the add photo window and the background
     windowBackground.classList.add('hidden');
     photoWindow.classList.add('hidden');
+    //delete the stuff within the fields
+    var url = document.getElementById('photo-url');
+    url.value = '';
+    var caption = document.getElementById('photo-caption');
+    caption.value = '';
   });
 
 

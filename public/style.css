@@ -282,7 +282,7 @@ body {
 	outline: none;
 }
 
-//add photo window background
+/*add photo window background*/
 #window-backdrop{
 	position: fixed;
 	top: 0px;
@@ -301,4 +301,36 @@ body {
 	right: 0px;
 	z-index: 1010px;
 	overflow: scroll;
+}
+
+.hidden{
+	display: none;
+}
+
+.window-action-button{
+	font-size: 20px;
+	color: white;
+	padding: 10px;
+	background-color: black;
+	border: 2px solid #d3d3d3;
+	border-radius: 6px;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.window-action-button:hover{
+	background-color: #f6c3f0;
+	border-color: black;
+}
+
+.window-dialog{
+	width: auto;
+	max-width: 500px;
+	min-width: 300px;
+	min-height: 300px;
+	max-height: 500px;
+
+	margin: 40px auto;
+	background-color: white;
+	border-radius: 20px;
 }

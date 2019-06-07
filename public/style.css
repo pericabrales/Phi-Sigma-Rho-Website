@@ -196,12 +196,13 @@ body {
 
 
 .photo-card-actives-container .photo-card {
-	flex: 1 32%;
+
 	background-color: #99ffff;
-	border: 2px dotted #00b3b3;
+	border: 4px dotted #00b3b3;
 	padding: 10px;
 	text-align: center;
 	margin: 20px;
+	min-width: 40%;
 }
 
 .photo-card {
@@ -260,14 +261,15 @@ body {
 	margin: 10px;
 	position: relative;
 	bottom: 55px;
+	justify-content: center;
 }
 
 .photo-card-actives-container .caption{
-  font-size: 40px;
   text-align: center;
-  position: relative;
-  top: 10px;
   color: black;
+	font-size: 40px;
+	position: relative;
+	top: 12px;
 }
 
 .photo-card-actives-container .caption a{

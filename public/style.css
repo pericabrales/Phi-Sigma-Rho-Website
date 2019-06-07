@@ -206,11 +206,22 @@ body {
 
 .photo-card {
 	background-color: #99ffff;
-	border: 2px dotted #00b3b3;
+	border: 4px dotted #00b3b3;
 	padding: 10px;
 	text-align: center;
 	margin: 20px;
 	min-width: 25%;
+}
+
+.event-card{
+	background-color: #99ffff;
+	border: 4px dotted #00b3b3;
+	padding: 10px;
+	float: left;
+	margin: 20px;
+	min-width: 25%;
+	font-size: 30px;
+	border-radius: 5%;
 }
 
 
@@ -230,6 +241,16 @@ body {
 	text-align: center;
   font-size: 60px;
 	font-weight: 200;
+}
+
+.event-container{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+	margin: 10px;
+	position: relative;
+	bottom: 55px;
+	justify-content: center;
 }
 
 .photo-card-actives-container  {

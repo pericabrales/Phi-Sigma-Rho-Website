@@ -1,6 +1,7 @@
 var path = require('path');
 var express = require('express');
 var exphbs = require('express-handlebars');
+var bodyParser = require('body-parser');
 //var twitNumber;
 
 var sororityPhotos = require('./sororityPhotos');
@@ -42,6 +43,9 @@ app.get('/:type', function(req, res, next){
   }
   else if(page == "about"){
     res.status(200).render('aboutPage');
+  }
+  else if(page == "register"){
+    res.status(200).render('registerPage');
   }
   else{
     next();

@@ -1,15 +1,69 @@
-  /*var cook=document.querySelector("#cookies");
-  if(cook){
-    cook.addEventListener("click", function(){
-  function cookiesCreate(){
+function cookiesCreate(){
+  var modal = document.querySelector("#cookies-open-modal");
+  var backdrop = document.querySelector("#cookies-modal-backdrop");
+  modal.style.display = "block"; /*do not show if clicked*/
+  backdrop.style.display= "block"; /*do not show if clicked*/
+}
+
+  function cookieClose(){
     var modal = document.querySelector("#cookies-open-modal");
     var backdrop = document.querySelector("#cookies-modal-backdrop");
-    modal.style.display = "block"; /*show if clicked*/
-//    backdrop.style.display= "block"; /*show if clicked*/
-//  }
-//  var modal = document.querySelector("#open-modal");
+    console.log("x button clicked");
+    modal.style.display = "none"; /*do not show if clicked*/
+    backdrop.style.display= "none"; /*do not show if clicked*/
+  }
 
-  var modalContext = {
+  var close= document.querySelector("#modal-close-button");
+   if(close){
+     close.addEventListener("click", function(){
+       cookieClose();
+     });
+   }
+
+ var open=document.querySelector("#cookies");
+ if(open){
+   open.addEventListener("click", function(){
+     cookiesCreate();
+   });
+ }
+
+ //for info Night
+
+ function infoCreate(){
+   var modal = document.querySelector("#info-open-modal");
+   var backdrop = document.querySelector("#info-modal-backdrop");
+   modal.style.display = "block"; /*do not show if clicked*/
+   backdrop.style.display= "block"; /*do not show if clicked*/
+ }
+
+   function infoClose(){
+     var modal = document.querySelector("#info-open-modal");
+     var backdrop = document.querySelector("#info-modal-backdrop");
+     console.log("x button clicked");
+     modal.style.display = "none"; /*do not show if clicked*/
+     backdrop.style.display= "none"; /*do not show if clicked*/
+   }
+
+  var infoOpen=document.querySelector("#info");
+  if(infoOpen){
+    infoOpen.addEventListener("click", function(){
+      infoCreate();
+    });
+  }
+
+  var infoCancel= document.querySelector("#modal-close-button");
+    if(infoCancel){
+      infoCancel.addEventListener("click", function(){
+        infoClose();
+      });
+    }
+
+
+
+
+  //var modal = document.querySelector("#open-modal");
+
+  /*var modalContext = {
     eventTitle: "eventTitle",
     when: "when",
     where: "where",
@@ -36,7 +90,7 @@
   modalCloseButton.addEventListener('click', function closeModal(){
     modal.classList.add('hidden');
     backdrop.classList.add('hidden');
-  });
+  });*/
 
 
 //Stuff for inserting photo and getting the windows to pop up when the buttons are pushed
@@ -105,7 +159,7 @@
       windowBackground.classList.add('hidden');
       photoWindow.classList.add('hidden');
       //add a call to a function that creates the twit and sends it to memory
-      
+
 
       //delete the stuff within the fields
       url.value = '';

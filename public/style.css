@@ -221,7 +221,9 @@ body {
 }
 
 .caption {
-	font-size: 35px;
+	font-size: 25px;
+	position: relative;
+	top: 15px;
 }
 
 .title-container h1 {

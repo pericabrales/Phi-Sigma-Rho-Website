@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 
 var sororityPhotos = require('./sororityPhotos');
 var activePhotos = require('./activePhotos');
+var registerData = require('./registerData');
 
 //mongoDB stuff when we need it
 /*var MongoClient = require('mongodb').MongoClient;
@@ -45,7 +46,7 @@ app.get('/:type', function(req, res, next){
     res.status(200).render('aboutPage');
   }
   else if(page == "register"){
-    res.status(200).render('registerPage');
+    res.status(200).render('registerPage', registerData[page]);
   }
   else{
     next();

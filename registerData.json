@@ -1,0 +1,19 @@
+{
+  "register":{
+    "pageName": "Register for Events",
+    "peopleComing": [
+      {
+        "name": "Kate Galle",
+        "major": "Computer Science",
+        "email": "gallek@oregonstate.edu",
+        "eventsComing": "Cookies and Clubs, Bid Day"
+      },
+      {
+        "name": "Lauren Galle",
+        "major": "Computer Science",
+        "email": "gallel@oregonstate.edu",
+        "eventsComing": "Pref Night, Bid Day"
+      }
+    ]
+  }
+}

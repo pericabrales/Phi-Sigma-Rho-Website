@@ -96,12 +96,9 @@ body {
 	border: 1px solid black;
 }
 
-
-
 .site-title {
 	font-family: 'Pacifico', cursive;
 	font-size: 65px;
-	height: 125px;
 	align-items: center;
 	position: relative;
 	margin: 0;
@@ -109,6 +106,8 @@ body {
 	text-align: center;
 	color: #00b3b3;
 	border: 5px solid #00b3b3;
+	min-height: 125px;
+	max-height: 300px;
 }
 
 .navbar {

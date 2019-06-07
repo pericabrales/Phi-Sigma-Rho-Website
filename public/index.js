@@ -105,7 +105,7 @@
       windowBackground.classList.add('hidden');
       photoWindow.classList.add('hidden');
       //add a call to a function that creates the twit and sends it to memory
-
+      
 
       //delete the stuff within the fields
       url.value = '';

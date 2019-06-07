@@ -6,6 +6,14 @@ var exphbs = require('express-handlebars');
 var sororityPhotos = require('./sororityPhotos');
 var activePhotos = require('./activePhotos');
 
+//mongoDB stuff when we need it
+/*var MongoClient = require('mongodb').MongoClient;
+var mongoHost = process.env.MONGO_HOST;
+var mongoPort = process.env.MONGO_PORT || 27017;
+var mongoUser = process.eng.MONGO_USER;
+var mongoPassword = process.env.MONGO_PASSWORD;
+var DBName = process.env.MONGO_DB_NAME;*/
+
 var app = express();
 var port = process.env.PORT || 3000;
 

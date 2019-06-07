@@ -1,7 +1,13 @@
 <main class="register-page">
 
   <div class="title-container">
-    <h1> Register for Events </h1>
+    <h1> {{pageName}} </h1>
+  </div>
+
+  <div class="event-container">
+    {{#each peopleComing}}
+      {{>register}}
+    {{/each}}
   </div>
 
 </main>

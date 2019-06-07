@@ -45,7 +45,7 @@ app.get('/:type', function(req, res, next){
   else if(page == "about"){
     res.status(200).render('aboutPage');
   }
-  else if(page == "register"){
+  else if(page=="register"){
     res.status(200).render('registerPage', registerData[page]);
   }
   else{

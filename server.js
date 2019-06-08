@@ -20,7 +20,7 @@ var mongoUrl = `mongodb://${mongoUser}:${mongoPassword}@${mongoHost}:${mongoPort
 var db = null;
 
 var app = express();
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3010;
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
@@ -32,12 +32,12 @@ app.use(express.static('public'));
 
 app.get('/', function(req, res, next){
     res.status(200).render('homepage');
-});
+})
 
 
 app.get('/register', function(req, res, next){
-	var collection = db.collection('people');
-	collection.find({}).toArray(function(err,people){
+	var collection = db.collection('register');
+	collection.find({}).toArray(function(err, register){
 		if(err){
 			res.status(500).send({
 				error: "Error fetching data from DB"
@@ -45,14 +45,12 @@ app.get('/register', function(req, res, next){
 		}else{
 			console.log("== people:", register);
 			res.status(200).render('registerPage',{
-				pageName: "Register",
-				peopleComing: 3,
-				register: register
+				peopleComing: register,
 			});
 		}
 	});
 }); 
-});
+
 
 /*
 app.get('/:type', function(req, res, next){

@@ -34,7 +34,7 @@ app.get('/', function(req, res, next){
     res.status(200).render('homepage');
 });
 
-/*
+
 app.get('/register', function(req, res, next){
 	var collection = db.collection('people');
 	collection.find({}).toArray(function(err,people){
@@ -52,8 +52,8 @@ app.get('/register', function(req, res, next){
 		}
 	});
 }); 
-*/
 
+/*
 app.get('/:type', function(req, res, next){
   var page = req.params.type.toLowerCase();
   if(page == "active"){
@@ -73,7 +73,7 @@ app.get('/:type', function(req, res, next){
         });
       }
     });*/
-
+/*
     res.status(200).render('photoPageActives', sororityPhotos[page]);
   }
   else if(sororityPhotos[page]){

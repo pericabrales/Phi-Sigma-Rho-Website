@@ -391,10 +391,11 @@ body {
 	align-items: center;
 	font-size: 30px;
 	margin: 20px;
+	font-weight: 600;
 }
 
 .photo-input-element > label{
-	font-weight: normal;
+	font-weight: 600;
 	flex: 1 75px;
 	margin-right: 20px;
 	border: 4px;
@@ -404,7 +405,7 @@ body {
 	flex: 6 200px;
 	padding: 10px;
 	font-size: 20px;
-	border: 2px solid #d3d3d3;
+	border: 2px solid black;
 }
 
 .window-footer{

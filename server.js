@@ -27,8 +27,8 @@ app.set('view engine', 'handlebars');
 
 app.use(bodyParser.json());
 
-
 app.use(express.static('public'));
+//app.use(bodyParser.json);
 
 app.get('/', function(req, res, next){
     res.status(200).render('homepage');
@@ -101,7 +101,32 @@ app.get('/:type', function(req, res, next){
     });
 }
 });
+
 /*
+=======
+
+app.post('/register/addRegister', function(req, res, next){
+  console.log("== req.body:", req.body);
+  if (req.body && req.body.name && req.body.major && req.body.email && req.body.eventsComing) {
+    if (registerData[register]) {
+      registerData[register].peopleComing.push({
+        name: req.body.name,
+        major: req.body.major,
+        email: req.body.email,
+        eventsComing: req.body.eventsComing
+      });
+      res.status(200).send("Info successfully added");
+    } else {
+      next();
+    }
+  } else {
+    res.status(400).send({
+      error: "Request body needs all information."
+    });
+  }
+});
+
+>>>>>>> 38d1aa98813869c46f7896fccb4ef0d2d180b560
 //trying to add photos through mongoDB  to non active class pages
 app.post('/:type/addPhoto', function(req, res, next){
   var page = req.params.type.toLowerCase();

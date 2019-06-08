@@ -1,3 +1,5 @@
+//for cookies and Clubs
+
 function cookiesCreate(){
   var modal = document.querySelector("#cookies-open-modal");
   var backdrop = document.querySelector("#cookies-modal-backdrop");
@@ -54,6 +56,7 @@ function cookiesCreate(){
   var infoCancel= document.querySelector("#modal-close-button");
     if(infoCancel){
       infoCancel.addEventListener("click", function(){
+        console.log("info event");
         infoClose();
       });
     }
@@ -171,3 +174,89 @@ function cookiesCreate(){
   });
 
   //get the information from the fields
+
+
+
+
+
+  /*function handleRegAccept(){
+    var namePerson= document.getElementById('name-enter').value.trim();
+    var majorPerson= document.getElementById('major-enter').value.trim();
+    var emailPerson= document.getElementById('email-enter').value.trim();
+    var attendPerson= document.getElementById('attend-enter').value.trim();
+
+    if(!namePerson || !majorPerson || !emailPerson || !attendPerson){
+      alert("Enter all of your information!");
+    }else{
+      var request = new XMLHttpRequest();
+      var url = '/register'+ '/addRegister';
+      request.open('POST', url);
+
+      var requestBody = JSON.stringify({
+        name: namePerson,
+        major: majorPerson,
+        email: emailPerson,
+        eventsComing: attendPerson
+      });
+
+      request.addEventListener('load', function (event) {
+        if (event.target.status === 200) {
+          var registerTemplate = Handlebars.templates.register;
+          var registerHTML = registerTemplate({
+            name: namePerson,
+            major: majorPerson,
+            email: emailPerson,
+            eventsComing: attendPerson
+          });
+          var registerContainer = document.querySelector('.event-container');
+          registerContainer.insertAdjacentHTML('beforeend', registerHTML);
+        } else {
+          var message = event.target.response;
+          alert("Error storing information on server: " + message);
+        }
+      });
+
+      request.setRequestHeader('Content-Type', 'application/json');
+      request.send(requestBody);
+
+      hideRegisterModal();
+    }
+  }*/
+
+  function showRegisterModal(){
+    var modal = document.querySelector("#add-register-window");
+    var backdrop = document.querySelector("#register-backdrop");
+    modal.style.display = "block"; /*do not show if clicked*/
+    backdrop.style.display= "block"; /*do not show if clicked*/
+  }
+
+  function clearRegisterModalInputs() {
+    var modalInputElements = document.querySelectorAll('#add-register-window input')
+    for (var i = 0; i < modalInputElements.length; i++) {
+      modalInputElements[i].value = '';
+    }
+  }
+
+  function hideRegisterModal(){
+    var modal = document.querySelector("#add-register-window");
+    var backdrop = document.querySelector("#register-backdrop");
+    console.log("x button clicked");
+    modal.style.display = "none"; /*do not show if clicked*/
+    backdrop.style.display= "none"; /*do not show if clicked*/
+
+    clearRegisterModalInputs();
+  }
+
+    var registerClose= document.querySelector("#register-close");
+     if(registerClose){
+       registerClose.addEventListener("click", function(){
+         hideRegisterModal();
+       });
+     }
+
+   var registerOpen=document.querySelector("#create-register-button");
+   if(registerOpen){
+     registerOpen.addEventListener("click", function(){
+       showRegisterModal();
+     });
+   }

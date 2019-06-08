@@ -317,7 +317,8 @@ body {
 	left: 0px;
 	right: 0px;
 	z-index: 1000px;
-	background-color: rgba(0,0,0,0.8);
+	background-color: #99ffff;
+	opacity: 0.6;
 }
 
 #add-photo-window{
@@ -335,68 +336,66 @@ body {
 }
 
 .window-action-button{
-	font-size: 15px;
+	font-family: 'Amatic SC', cursive,
+	font-size: 20px;
 	color: white;
 	padding: 10px;
-	background-color: black;
-	border: 2px solid #d3d3d3;
+	margin: 5px;
+	background-color: #00b3b3;
+	border: 2px solid black;
 	border-radius: 6px;
 	font-weight: normal;
 	cursor: pointer;
 }
 
 .window-action-button:hover{
-	background-color: #f6c3f0;
+	background-color: #99ffff;
+	color: black;
 }
 
 .window-dialog{
 	width: auto;
 	max-width: 600px;
-	min-width: 300px;
+	min-width: 350px;
 	min-height: 300px;
-	max-height: 500px;
-
 	margin: 40px auto;
-	background-color: white;
-	border-radius: 20px;
+	background-color: #99ffcc;
+	border-radius: 15px;
+	border: 1px solid black;
 }
 
 .window-header{
 	position: relative;
-	padding: 15px 25px;
+	text-align: center;
+	padding: 10px 20px;
 }
 
 .window-header h3{
-	margin: 0px;
-	font-size: 40px;
+	margin: 0;
+	font-size: 70px;
+	font-weight: 100;
 }
 
 #window-close{
 	position: absolute;
-	right: 20px;
-	top: 10px;
-	font-size: 20px;
+	right: 10px;
+	top: 5px;
+	font-size: 24px;
 	border: none;
 	cursor: pointer;
-}
-
-#window-close:hover{
-	background-color: #f6c3f0;
-}
-
-#window-close:focus{
-	outline: none;
+	background-color: #99ffcc;
 }
 
 .photo-input-element{
 	display: flex;
 	align-items: center;
-	font-size: 23px;
-	margin: 10px 0;
+	font-size: 30px;
+	margin: 20px;
+	font-weight: 600;
 }
 
 .photo-input-element > label{
-	font-weight: normal;
+	font-weight: 600;
 	flex: 1 75px;
 	margin-right: 20px;
 	border: 4px;
@@ -406,7 +405,7 @@ body {
 	flex: 6 200px;
 	padding: 10px;
 	font-size: 20px;
-	border: 2px solid #d3d3d3;
+	border: 2px solid black;
 }
 
 .window-footer{
@@ -416,9 +415,44 @@ body {
 }
 
 #window-cancel, #window-accept{
-	margine-left: 25px;
+	margin-left: 10px;
+	font-size: 23px;
+	font-weight: 600;
+	font-family: 'Amatic SC', cursive;
 }
 
 #window-cancel, #window-accept:focus{
 	outline: none;
+}
+
+#create-register-button{
+	display: inline;
+	position: relative;
+	float: right;
+	top: 150px;
+	right:  40px;
+	height: 70px;
+	width: 70px;
+	border: none;
+	border-radius: 50%;
+	font-size: 40px;
+	background-color: #f797e4;
+	color: white;
+	cursor: pointer;
+	border: 1px solid white;
+}
+
+.fas.fa-pencil-alt{
+	font-size: 50px;
+	text-align: center;
+	position: relative;
+	bottom: 4px;
+	right: 1px;
+}
+
+#create-register-button:hover{
+	background-color: white;
+	color: #f797e4;
+	border: 1px solid #f797e4;
+	transform: rotate(90deg);
 }

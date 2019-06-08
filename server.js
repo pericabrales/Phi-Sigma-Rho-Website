@@ -20,7 +20,7 @@ var mongoUrl = `mongodb://${mongoUser}:${mongoPassword}@${mongoHost}:${mongoPort
 var db = null;
 
 var app = express();
-var port = process.env.PORT || 3010;
+var port = process.env.PORT || 3000;
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
@@ -52,6 +52,7 @@ app.get('/register', function(req, res, next){
 		}
 	});
 }); 
+});
 
 /*
 app.get('/:type', function(req, res, next){
@@ -206,4 +207,3 @@ MongoClient.connect(mongoUrl, function(err, client){
     console.log("Server is running on port", port);
   });
 });
-

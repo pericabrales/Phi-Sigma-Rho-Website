@@ -13,7 +13,7 @@ function cookiesCreate(){
     backdrop.style.display= "none"; /*do not show if clicked*/
   }
 
-  var close= document.querySelector("#modal-close-button");
+  var close= document.querySelector("#cookies-close-button");
    if(close){
      close.addEventListener("click", function(){
        cookieClose();
@@ -57,6 +57,127 @@ function cookiesCreate(){
         infoClose();
       });
     }
+
+    //for mocktails
+    function mockCreate(){
+      var modal = document.querySelector("#mock-open-modal");
+      var backdrop = document.querySelector("#mock-modal-backdrop");
+      modal.style.display = "block"; /*do not show if clicked*/
+      backdrop.style.display= "block"; /*do not show if clicked*/
+    }
+
+      function mockClose(){
+        var modal = document.querySelector("#mock-open-modal");
+        var backdrop = document.querySelector("#mock-modal-backdrop");
+        console.log("x button clicked");
+        modal.style.display = "none"; /*do not show if clicked*/
+        backdrop.style.display= "none"; /*do not show if clicked*/
+      }
+
+     var mockOpen=document.querySelector("#mock");
+     if(mockOpen){
+       mockOpen.addEventListener("click", function(){
+         mockCreate();
+       });
+     }
+
+     var mockCancel= document.querySelector("#mock-close-button");
+       if(mockCancel){
+         mockCancel.addEventListener("click", function(){
+           mockClose();
+         });
+       }
+
+       //pref Night
+       function prefCreate(){
+         var modal = document.querySelector("#pref-open-modal");
+         var backdrop = document.querySelector("#pref-modal-backdrop");
+         modal.style.display = "block"; /*do not show if clicked*/
+         backdrop.style.display= "block"; /*do not show if clicked*/
+       }
+
+         function prefClose(){
+           var modal = document.querySelector("#pref-open-modal");
+           var backdrop = document.querySelector("#pref-modal-backdrop");
+           console.log("x button clicked");
+           modal.style.display = "none"; /*do not show if clicked*/
+           backdrop.style.display= "none"; /*do not show if clicked*/
+         }
+
+        var prefOpen=document.querySelector("#pref");
+        if(prefOpen){
+          prefOpen.addEventListener("click", function(){
+            prefCreate();
+          });
+        }
+
+        var prefCancel= document.querySelector("#pref-close-button");
+          if(prefCancel){
+            prefCancel.addEventListener("click", function(){
+              prefClose();
+            });
+          }
+
+          //Bid Day
+          function bidCreate(){
+            var modal = document.querySelector("#bid-open-modal");
+            var backdrop = document.querySelector("#bid-modal-backdrop");
+            modal.style.display = "block"; /*do not show if clicked*/
+            backdrop.style.display= "block"; /*do not show if clicked*/
+          }
+
+            function bidClose(){
+              var modal = document.querySelector("#bid-open-modal");
+              var backdrop = document.querySelector("#bid-modal-backdrop");
+              console.log("x button clicked");
+              modal.style.display = "none"; /*do not show if clicked*/
+              backdrop.style.display= "none"; /*do not show if clicked*/
+            }
+
+           var bidOpen=document.querySelector("#bid");
+           if(bidOpen){
+             bidOpen.addEventListener("click", function(){
+               bidCreate();
+             });
+           }
+
+           var bidCancel= document.querySelector("#bid-close-button");
+             if(bidCancel){
+               bidCancel.addEventListener("click", function(){
+                 bidClose();
+               });
+             }
+
+             //brunch/induction
+             function brunchCreate(){
+               var modal = document.querySelector("#brunch-open-modal");
+               var backdrop = document.querySelector("#brunch-modal-backdrop");
+               modal.style.display = "block"; /*do not show if clicked*/
+               backdrop.style.display= "block"; /*do not show if clicked*/
+             }
+
+               function brunchClose(){
+                 var modal = document.querySelector("#brunch-open-modal");
+                 var backdrop = document.querySelector("#brunch-modal-backdrop");
+                 console.log("x button clicked");
+                 modal.style.display = "none"; /*do not show if clicked*/
+                 backdrop.style.display= "none"; /*do not show if clicked*/
+               }
+
+              var brunchOpen=document.querySelector("#brunch");
+              if(brunchOpen){
+                brunchOpen.addEventListener("click", function(){
+                  brunchCreate();
+                });
+              }
+
+              var brunchCancel= document.querySelector("#brunch-close-button");
+                if(brunchCancel){
+                  brunchCancel.addEventListener("click", function(){
+                    brunchClose();
+                  });
+                }
+
 
 
 

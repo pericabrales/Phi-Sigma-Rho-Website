@@ -17,7 +17,7 @@ var mongoPassword = process.env.MONGO_PASSWORD;
 var DBName = process.env.MONGO_DB_NAME;*/
 
 var app = express();
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3010;
 
 
 

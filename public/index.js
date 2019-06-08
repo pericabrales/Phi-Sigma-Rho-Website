@@ -215,6 +215,111 @@ function cookiesCreate(){
 
 
 //Stuff for inserting photo and getting the windows to pop up when the buttons are pushed
+
+//find out the class that person is trying to get
+function getClass(){
+  var path = window.location.pathname;
+  var pathParts = path.split('/');
+  if(pathParts[1] == 'active' || pathParts[1] == 'members' || pathParts[1] == 'potential' || pathParts[1] == 'rho' || pathParts[1] == 'sigma' || pathParts[1] == 'tau' || pathParts[1] == 'rho'){
+    return pathParts[1];
+  }
+  else{
+    return null;
+  }
+}
+
+fucntion addPhotoButtonClick(){
+  var photoURL = document.getElementById('photo-url').value.trim();
+  var caption = document.getElementById('photo-caption').value.trim();
+
+  if(!photoURL || !caption){
+    alert("You must put both a url and a caption");
+  }
+  else{
+    var postRequest = new XMLHttpRequest();
+    var requestURL = '/' + getClass() + '/addPhoto';
+    postRequest.open('POST', requestURL);
+
+    var requestBody = JSON.stringify({
+      url: photoURL,
+      caption: caption
+    });
+
+    postRequest.addEventListener('load', function(event){
+      if(event.target.status === 200){
+        if(getClass() == 'active'){
+          var photoCardTemp = Handlebars.templates.photoCardActives;
+          var newPhotoCardHTML = photoCardTemp({
+            url: photoURL,
+            caption: caption
+          });
+          var photoCardCont = document.querySelector('.photo-card-actives-container');
+          photoCardCont.insertAdjacentHTML('beforeend', newPhotoCardHTML);
+        }
+        else if(getClass() != 'active' && getClass() != null){
+          var photoCardTemp = Handlebars.templates.photoCard;
+          var newPhotoCardHTML = photoCardTemp({
+            url: photoURL,
+            caption: caption
+          });
+          var photoCardCont = document.querySelector('.photo-card-container');
+          photoCardCont.insertAdjacentHTML('beforeend', newPhotoCardHTML);
+        }
+      }
+      else{
+        alert("Error storing photo: " + event.target.response);
+      }
+    });
+
+    postRequest.setRequestHeader('Content-Type', 'application/json');
+    postRequest.send(requestBody);
+
+    closeWindow();
+
+  }
+}
+
+function openWindow(){
+  var windowBackground = document.getElementById('window-backdrop');
+  var photoWindow = document.getElementById('add-photo-window');
+  //unhide the add photo window and the background
+  windowBackground.classList.remove('hidden');
+  photoWindow.classList.remove('hidden');
+}
+
+function closeWindow(){
+  var windowBackground = document.getElementById('window-backdrop');
+  var photoWindow = document.getElementById('add-photo-window');
+  //unhide the add photo window and the background
+  windowBackground.classList.add('hidden');
+  photoWindow.classList.add('hidden');
+
+  //clear the fields
+  var url = document.getElementById('photo-url');
+  var caption = document.getElementById('photo-caption');
+  url.value = '';
+  caption.value = '';
+}
+
+window.addEventListener('DOMContentLoaded', function(){
+  var addPhotoButton = document.getElementById('add-photo-button');
+  if(addPhotoButton){
+    addPhotoButton.addEventListener('click', openWindow);
+  }
+
+  var windowAcceptButton = document.getElementsById('window-accept');
+  if(windowAcceptButton){
+    windowAcceptButton.addEventListener('click', addPhotoButtonClick);
+  }
+
+  var windowCancelButtons = document.getElementByClassName('window-close-button');
+  for(var i = 0; i < windowCancelButtons.length; i++){
+    windowCancelButtons[i].addEventListener('click', closeWindow);
+  }
+});
+
+
+/*
   //insert a new photo
   function insertNewPhoto(photoUrl, photoCaption){
     var photo = {
@@ -290,5 +395,5 @@ function cookiesCreate(){
       alert("You must put both a url and a caption");
     }
   });
-
+*/
   //get the information from the fields

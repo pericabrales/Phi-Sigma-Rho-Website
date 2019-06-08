@@ -1,3 +1,5 @@
+//for cookies and Clubs
+
 function cookiesCreate(){
   var modal = document.querySelector("#cookies-open-modal");
   var backdrop = document.querySelector("#cookies-modal-backdrop");
@@ -13,7 +15,7 @@ function cookiesCreate(){
     backdrop.style.display= "none"; /*do not show if clicked*/
   }
 
-  var close= document.querySelector("#cookies-close-button");
+  var close= document.querySelector("#modal-close-button");
    if(close){
      close.addEventListener("click", function(){
        cookieClose();
@@ -54,130 +56,10 @@ function cookiesCreate(){
   var infoCancel= document.querySelector("#modal-close-button");
     if(infoCancel){
       infoCancel.addEventListener("click", function(){
+        console.log("info event");
         infoClose();
       });
     }
-
-    //for mocktails
-    function mockCreate(){
-      var modal = document.querySelector("#mock-open-modal");
-      var backdrop = document.querySelector("#mock-modal-backdrop");
-      modal.style.display = "block"; /*do not show if clicked*/
-      backdrop.style.display= "block"; /*do not show if clicked*/
-    }
-
-      function mockClose(){
-        var modal = document.querySelector("#mock-open-modal");
-        var backdrop = document.querySelector("#mock-modal-backdrop");
-        console.log("x button clicked");
-        modal.style.display = "none"; /*do not show if clicked*/
-        backdrop.style.display= "none"; /*do not show if clicked*/
-      }
-
-     var mockOpen=document.querySelector("#mock");
-     if(mockOpen){
-       mockOpen.addEventListener("click", function(){
-         mockCreate();
-       });
-     }
-
-     var mockCancel= document.querySelector("#mock-close-button");
-       if(mockCancel){
-         mockCancel.addEventListener("click", function(){
-           mockClose();
-         });
-       }
-
-       //pref Night
-       function prefCreate(){
-         var modal = document.querySelector("#pref-open-modal");
-         var backdrop = document.querySelector("#pref-modal-backdrop");
-         modal.style.display = "block"; /*do not show if clicked*/
-         backdrop.style.display= "block"; /*do not show if clicked*/
-       }
-
-         function prefClose(){
-           var modal = document.querySelector("#pref-open-modal");
-           var backdrop = document.querySelector("#pref-modal-backdrop");
-           console.log("x button clicked");
-           modal.style.display = "none"; /*do not show if clicked*/
-           backdrop.style.display= "none"; /*do not show if clicked*/
-         }
-
-        var prefOpen=document.querySelector("#pref");
-        if(prefOpen){
-          prefOpen.addEventListener("click", function(){
-            prefCreate();
-          });
-        }
-
-        var prefCancel= document.querySelector("#pref-close-button");
-          if(prefCancel){
-            prefCancel.addEventListener("click", function(){
-              prefClose();
-            });
-          }
-
-          //Bid Day
-          function bidCreate(){
-            var modal = document.querySelector("#bid-open-modal");
-            var backdrop = document.querySelector("#bid-modal-backdrop");
-            modal.style.display = "block"; /*do not show if clicked*/
-            backdrop.style.display= "block"; /*do not show if clicked*/
-          }
-
-            function bidClose(){
-              var modal = document.querySelector("#bid-open-modal");
-              var backdrop = document.querySelector("#bid-modal-backdrop");
-              console.log("x button clicked");
-              modal.style.display = "none"; /*do not show if clicked*/
-              backdrop.style.display= "none"; /*do not show if clicked*/
-            }
-
-           var bidOpen=document.querySelector("#bid");
-           if(bidOpen){
-             bidOpen.addEventListener("click", function(){
-               bidCreate();
-             });
-           }
-
-           var bidCancel= document.querySelector("#bid-close-button");
-             if(bidCancel){
-               bidCancel.addEventListener("click", function(){
-                 bidClose();
-               });
-             }
-
-             //brunch/induction
-             function brunchCreate(){
-               var modal = document.querySelector("#brunch-open-modal");
-               var backdrop = document.querySelector("#brunch-modal-backdrop");
-               modal.style.display = "block"; /*do not show if clicked*/
-               backdrop.style.display= "block"; /*do not show if clicked*/
-             }
-
-               function brunchClose(){
-                 var modal = document.querySelector("#brunch-open-modal");
-                 var backdrop = document.querySelector("#brunch-modal-backdrop");
-                 console.log("x button clicked");
-                 modal.style.display = "none"; /*do not show if clicked*/
-                 backdrop.style.display= "none"; /*do not show if clicked*/
-               }
-
-              var brunchOpen=document.querySelector("#brunch");
-              if(brunchOpen){
-                brunchOpen.addEventListener("click", function(){
-                  brunchCreate();
-                });
-              }
-
-              var brunchCancel= document.querySelector("#brunch-close-button");
-                if(brunchCancel){
-                  brunchCancel.addEventListener("click", function(){
-                    brunchClose();
-                  });
-                }
-
 
 
 
@@ -292,3 +174,89 @@ function cookiesCreate(){
   });
 
   //get the information from the fields
+
+
+
+
+
+  /*function handleRegAccept(){
+    var namePerson= document.getElementById('name-enter').value.trim();
+    var majorPerson= document.getElementById('major-enter').value.trim();
+    var emailPerson= document.getElementById('email-enter').value.trim();
+    var attendPerson= document.getElementById('attend-enter').value.trim();
+
+    if(!namePerson || !majorPerson || !emailPerson || !attendPerson){
+      alert("Enter all of your information!");
+    }else{
+      var request = new XMLHttpRequest();
+      var url = '/register'+ '/addRegister';
+      request.open('POST', url);
+
+      var requestBody = JSON.stringify({
+        name: namePerson,
+        major: majorPerson,
+        email: emailPerson,
+        eventsComing: attendPerson
+      });
+
+      request.addEventListener('load', function (event) {
+        if (event.target.status === 200) {
+          var registerTemplate = Handlebars.templates.register;
+          var registerHTML = registerTemplate({
+            name: namePerson,
+            major: majorPerson,
+            email: emailPerson,
+            eventsComing: attendPerson
+          });
+          var registerContainer = document.querySelector('.event-container');
+          registerContainer.insertAdjacentHTML('beforeend', registerHTML);
+        } else {
+          var message = event.target.response;
+          alert("Error storing information on server: " + message);
+        }
+      });
+
+      request.setRequestHeader('Content-Type', 'application/json');
+      request.send(requestBody);
+
+      hideRegisterModal();
+    }
+  }*/
+
+  function showRegisterModal(){
+    var modal = document.querySelector("#add-register-window");
+    var backdrop = document.querySelector("#register-backdrop");
+    modal.style.display = "block"; /*do not show if clicked*/
+    backdrop.style.display= "block"; /*do not show if clicked*/
+  }
+
+  function clearRegisterModalInputs() {
+    var modalInputElements = document.querySelectorAll('#add-register-window input')
+    for (var i = 0; i < modalInputElements.length; i++) {
+      modalInputElements[i].value = '';
+    }
+  }
+
+  function hideRegisterModal(){
+    var modal = document.querySelector("#add-register-window");
+    var backdrop = document.querySelector("#register-backdrop");
+    console.log("x button clicked");
+    modal.style.display = "none"; /*do not show if clicked*/
+    backdrop.style.display= "none"; /*do not show if clicked*/
+
+    clearRegisterModalInputs();
+  }
+
+    var registerClose= document.querySelector("#register-close");
+     if(registerClose){
+       registerClose.addEventListener("click", function(){
+         hideRegisterModal();
+       });
+     }
+
+   var registerOpen=document.querySelector("#create-register-button");
+   if(registerOpen){
+     registerOpen.addEventListener("click", function(){
+       showRegisterModal();
+     });
+   }

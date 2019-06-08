@@ -24,6 +24,8 @@ var port = process.env.PORT || 3000;
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
+app.use(bodyParser.json());
+
 app.use(express.static('public'));
 //app.use(bodyParser.json);
 
@@ -67,6 +69,27 @@ app.get('/:type', function(req, res, next){
   }
   else{
     next();
+  }
+});
+
+app.post('/register/addRegister', function(req, res, next){
+  console.log("== req.body:", req.body);
+  if (req.body && req.body.name && req.body.major && req.body.email && req.body.eventsComing) {
+    if (registerData[register]) {
+      registerData[register].peopleComing.push({
+        name: req.body.name,
+        major: req.body.major,
+        email: req.body.email,
+        eventsComing: req.body.eventsComing
+      });
+      res.status(200).send("Info successfully added");
+    } else {
+      next();
+    }
+  } else {
+    res.status(400).send({
+      error: "Request body needs all information."
+    });
   }
 });
 

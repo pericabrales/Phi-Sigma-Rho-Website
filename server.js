@@ -9,17 +9,15 @@ var activePhotos = require('./activePhotos');
 var registerData = require('./registerData');
 
 //mongoDB stuff when we need it
-/*var MongoClient = require('mongodb').MongoClient;
+var MongoClient = require('mongodb').MongoClient;
 var mongoHost = process.env.MONGO_HOST;
 var mongoPort = process.env.MONGO_PORT || 27017;
 var mongoUser = process.eng.MONGO_USER;
 var mongoPassword = process.env.MONGO_PASSWORD;
-var DBName = process.env.MONGO_DB_NAME;*/
+var DBName = process.env.MONGO_DB_NAME;
 
 var app = express();
 var port = process.env.PORT || 3000;
-
-
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
@@ -46,12 +44,20 @@ app.get('/:type', function(req, res, next){
     res.status(200).render('aboutPage');
   }
   else if(page=="register"){
-    res.status(200).render('registerPage', registerData[page]);
-  }
-  else{
-    next();
-  }
-});
+var collection = db.collection('register');
+    collection.find({}).toArray(function (err, register){
+      if(err){
+        res.status(500).send({
+          error: "Error fetching register info from DB"
+        });
+      }else{
+        console.log("==:", register)
+        res.status(200).render('registerPage', {
+          register: register
+        });
+      }
+    });
+};
 
 app.get('/active/:type', function(req, res, next){
   var page = req.params.type.toLowerCase();
@@ -60,14 +66,16 @@ app.get('/active/:type', function(req, res, next){
   }
 });
 
-
 app.get('*', function (req, res, next) {
   res.status(404).render('404');
 });
 
-app.listen(port, function (err) {
+MongoClient.connect(mongoUrl, function(err, client){
   if(err){
     throw err;
   }
-  console.log("== Server is listening on port", port);
-});
+  db = client.db(mongoDBName);
+  app.listen(port, function(){
+    console.log("MONGO???")
+  })
+})

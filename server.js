@@ -16,6 +16,7 @@ var mongoUser = process.env.MONGO_USER;
 var mongoPassword = process.env.MONGO_PASSWORD;
 var mongoDBName = process.env.MONGO_DB_NAME;
 
+
 var mongoUrl = `mongodb://${mongoUser}:${mongoPassword}@${mongoHost}:${mongoPort}/${mongoDBName}`;
 var db = null;
 
@@ -43,16 +44,37 @@ app.get('/register', function(req, res, next){
 				error: "Error fetching data from DB"
 			});
 		}else{
-			console.log("== people:", register);
 			res.status(200).render('registerPage',{
 				peopleComing: register,
 			});
 		}
 	});
-}); 
+});
 
+app.post('/register/addRegister', function(req, res, next){
+  if(req.body && req.body.name && req.body.major && req.body.email && req.body.eventsComing){
+    var collection = db.collection('register');
+    collection.insertOne(
+      {name: req.body.name,
+      major: req.body.major,
+      email: req.body.email,
+      eventsComing: req.body.eventsComing},
+      function (err, result){
+        if(err){
+          res.status(500).send({
+            error: "Error inserting registration info"
+          });
+        }else{
+            res.status(200).send("Success");
+        }
+      }
+    );
+  }else{
+    res.status(400).send("Request needs a body with all fields");
+  }
 
-/*
+});
+
 app.get('/:type', function(req, res, next){
   var page = req.params.type.toLowerCase();
   if(page == "active"){
@@ -72,7 +94,7 @@ app.get('/:type', function(req, res, next){
         });
       }
     });*/
-/*
+
     res.status(200).render('photoPageActives', sororityPhotos[page]);
   }
   else if(sororityPhotos[page]){
@@ -84,7 +106,7 @@ app.get('/:type', function(req, res, next){
   else if(page == "about"){
     res.status(200).render('aboutPage');
   }
-  else if(page=="register"){
+/*  else if(page=="register"){
     var collection = db.collection('register');
     collection.find({}).toArray(function (err, register){
       if(err){
@@ -98,7 +120,7 @@ app.get('/:type', function(req, res, next){
 	});
       }
     });
-}
+}*/
 });
 
 /*
@@ -193,12 +215,12 @@ app.get('*', function (req, res, next) {
 });
 
 
-/*MongoClient.connect(mongoUrl, function(err, client){
+MongoClient.connect(mongoUrl, function(err, client){
   if(err){
     throw err;
   }
-  db = client.db(mongoDBName);*/
+  db = client.db(mongoDBName);
   app.listen(port, function(){
     console.log("Server is running on port", port);
   });
-//});
+});

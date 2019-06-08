@@ -456,3 +456,72 @@ body {
 	border: 1px solid #f797e4;
 	transform: rotate(90deg);
 }
+
+#register-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color:#99ffff;
+  opacity: 0.6;
+}
+
+#add-register-window {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1010;
+  overflow: scroll;
+}
+
+.register-dialog {
+  width: auto;
+  font-size: 40px;
+  max-width: 600px;
+  min-width: 350px;
+  min-height: 300px;
+  margin: 40px auto;
+  background-color: #99ffcc;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+
+.register-header {
+  position: relative;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.register-header h3 {
+  margin: 0;
+  font-size: 70px;
+  font-weight: 100;
+}
+
+#register-close {
+ position: absolute;
+ right: 10px;
+ top: 5px;
+ font-size: 24px;
+ border: none;
+ background: none;
+ padding: 0;
+ cursor: pointer;
+}
+
+.register-action-button {
+  font-size: 20px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ababab;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-body {
+  padding: 20px;
+}

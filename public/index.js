@@ -10,12 +10,11 @@ function cookiesCreate(){
   function cookieClose(){
     var modal = document.querySelector("#cookies-open-modal");
     var backdrop = document.querySelector("#cookies-modal-backdrop");
-    console.log("x button clicked");
     modal.style.display = "none"; /*do not show if clicked*/
     backdrop.style.display= "none"; /*do not show if clicked*/
   }
 
-  var close= document.querySelector("#modal-close-button");
+  var close= document.querySelector("#cookies-close-button");
    if(close){
      close.addEventListener("click", function(){
        cookieClose();
@@ -35,7 +34,7 @@ function cookiesCreate(){
    var modal = document.querySelector("#info-open-modal");
    var backdrop = document.querySelector("#info-modal-backdrop");
    modal.style.display = "block"; /*do not show if clicked*/
-   backdrop.style.display= "block"; /*do not show if clicked*/
+  backdrop.style.display= "block"; /*do not show if clicked*/
  }
 
    function infoClose(){
@@ -99,7 +98,7 @@ function cookiesCreate(){
 //Stuff for inserting photo and getting the windows to pop up when the buttons are pushed
 
 //find out the class that person is trying to get
-function getClass(){
+/*function getClass(){
   var path = window.location.pathname;
   var pathParts = path.split('/');
   if(pathParts[1] == 'active' || pathParts[1] == 'members' || pathParts[1] == 'potential' || pathParts[1] == 'rho' || pathParts[1] == 'sigma' || pathParts[1] == 'tau' || pathParts[1] == 'rho'){
@@ -109,7 +108,7 @@ function getClass(){
     return null;
   }
 }
-
+/*
 fucntion addPhotoButtonClick(){
   var photoURL = document.getElementById('photo-url').value.trim();
   var caption = document.getElementById('photo-caption').value.trim();
@@ -284,7 +283,8 @@ window.addEventListener('DOMContentLoaded', function(){
 
 
 
-  /*function handleRegAccept(){
+  function handleRegAccept(){
+
     var namePerson= document.getElementById('name-enter').value.trim();
     var majorPerson= document.getElementById('major-enter').value.trim();
     var emailPerson= document.getElementById('email-enter').value.trim();
@@ -326,7 +326,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
       hideRegisterModal();
     }
-  }*/
+  }
 
   function showRegisterModal(){
     var modal = document.querySelector("#add-register-window");
@@ -341,7 +341,6 @@ window.addEventListener('DOMContentLoaded', function(){
       modalInputElements[i].value = '';
     }
   }
-
   function hideRegisterModal(){
     var modal = document.querySelector("#add-register-window");
     var backdrop = document.querySelector("#register-backdrop");
@@ -349,9 +348,8 @@ window.addEventListener('DOMContentLoaded', function(){
     modal.style.display = "none"; /*do not show if clicked*/
     backdrop.style.display= "none"; /*do not show if clicked*/
 
-    clearRegisterModalInputs();
+   clearRegisterModalInputs();
   }
-
     var registerClose= document.querySelector("#register-close");
      if(registerClose){
        registerClose.addEventListener("click", function(){
@@ -359,9 +357,23 @@ window.addEventListener('DOMContentLoaded', function(){
        });
      }
 
+     var registerCancel= document.querySelector("#register-cancel");
+      if(registerCancel){
+        registerCancel.addEventListener("click", function(){
+          hideRegisterModal();
+        });
+      }
+
    var registerOpen=document.querySelector("#create-register-button");
    if(registerOpen){
      registerOpen.addEventListener("click", function(){
        showRegisterModal();
+     });
+   }
+
+   var registerAccept=document.querySelector("#register-accept");
+   if(registerAccept){
+     registerAccept.addEventListener("click", function(){
+       handleRegAccept();
      });
    }

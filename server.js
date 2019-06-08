@@ -9,20 +9,23 @@ var activePhotos = require('./activePhotos');
 var registerData = require('./registerData');
 
 //mongoDB stuff when we need it
-/*var MongoClient = require('mongodb').MongoClient;
+var MongoClient = require('mongodb').MongoClient;
 var mongoHost = process.env.MONGO_HOST;
 var mongoPort = process.env.MONGO_PORT || 27017;
-var mongoUser = process.eng.MONGO_USER;
+var mongoUser = process.env.MONGO_USER;
 var mongoPassword = process.env.MONGO_PASSWORD;
-var DBName = process.env.MONGO_DB_NAME;*/
+var mongoDBName = process.env.MONGO_DB_NAME;
+
+var mongoUrl = `mongodb://${mongoUser}:${mongoPassword}@${mongoHost}:${mongoPort}/${mongoDBName}`;
+var db = null;
 
 var app = express();
-var port = process.env.PORT || 3010;
-
-
+var port = process.env.PORT || 3000;
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
+
+app.use(bodyParser.json());
 
 app.use(express.static('public'));
 //app.use(bodyParser.json);
@@ -30,6 +33,26 @@ app.use(express.static('public'));
 app.get('/', function(req, res, next){
     res.status(200).render('homepage');
 });
+
+/*
+app.get('/register', function(req, res, next){
+	var collection = db.collection('people');
+	collection.find({}).toArray(function(err,people){
+		if(err){
+			res.status(500).send({
+				error: "Error fetching data from DB"
+			});
+		}else{
+			console.log("== people:", register);
+			res.status(200).render('registerPage',{
+				pageName: "Register",
+				peopleComing: 3,
+				register: register
+			});
+		}
+	});
+});
+*/
 
 app.get('/:type', function(req, res, next){
   var page = req.params.type.toLowerCase();
@@ -63,13 +86,47 @@ app.get('/:type', function(req, res, next){
     res.status(200).render('aboutPage');
   }
   else if(page=="register"){
-    res.status(200).render('registerPage', registerData[page]);
-  }
-  else{
-    next();
+    var collection = db.collection('register');
+    collection.find({}).toArray(function (err, register){
+      if(err){
+        res.status(500).send({
+          error: "Error fetching register info from DB"
+        });
+      }else{
+        console.log("==:", register)
+        res.status(200).render('registerPage', {
+	register: register
+	});
+      }
+    });
+}
+});
+
+/*
+=======
+
+app.post('/register/addRegister', function(req, res, next){
+  console.log("== req.body:", req.body);
+  if (req.body && req.body.name && req.body.major && req.body.email && req.body.eventsComing) {
+    if (registerData[register]) {
+      registerData[register].peopleComing.push({
+        name: req.body.name,
+        major: req.body.major,
+        email: req.body.email,
+        eventsComing: req.body.eventsComing
+      });
+      res.status(200).send("Info successfully added");
+    } else {
+      next();
+    }
+  } else {
+    res.status(400).send({
+      error: "Request body needs all information."
+    });
   }
 });
 
+>>>>>>> 38d1aa98813869c46f7896fccb4ef0d2d180b560
 //trying to add photos through mongoDB  to non active class pages
 app.post('/:type/addPhoto', function(req, res, next){
   var page = req.params.type.toLowerCase();
@@ -125,6 +182,7 @@ app.get('/active/:type', function(req, res, next){
     }
   });*/
 
+/*
   if(activePhotos[page]){
     res.status(200).render('photoPages', activePhotos[page]);
   }
@@ -132,15 +190,19 @@ app.get('/active/:type', function(req, res, next){
 
 //trying to connect this to the posting
 
-
+*/
 
 app.get('*', function (req, res, next) {
   res.status(404).render('404');
 });
 
-app.listen(port, function (err) {
+
+MongoClient.connect(mongoUrl, function(err, client){
   if(err){
     throw err;
   }
-  console.log("== Server is listening on port", port);
+  db = client.db(mongoDBName);
+  app.listen(port, function(){
+    console.log("Server is running on port", port);
+  });
 });

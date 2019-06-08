@@ -103,8 +103,6 @@ app.get('/:type', function(req, res, next){
 });
 
 /*
-=======
-
 app.post('/register/addRegister', function(req, res, next){
   console.log("== req.body:", req.body);
   if (req.body && req.body.name && req.body.major && req.body.email && req.body.eventsComing) {
@@ -124,9 +122,8 @@ app.post('/register/addRegister', function(req, res, next){
       error: "Request body needs all information."
     });
   }
-});
+});*/
 
->>>>>>> 38d1aa98813869c46f7896fccb4ef0d2d180b560
 //trying to add photos through mongoDB  to non active class pages
 app.post('/:type/addPhoto', function(req, res, next){
   var page = req.params.type.toLowerCase();
@@ -162,7 +159,7 @@ app.post('/:type/addPhoto', function(req, res, next){
   }
 });
 
-
+/*
 app.get('/active/:type', function(req, res, next){
   var page = req.params.type.toLowerCase();
 
@@ -197,12 +194,12 @@ app.get('*', function (req, res, next) {
 });
 
 
-MongoClient.connect(mongoUrl, function(err, client){
+/*MongoClient.connect(mongoUrl, function(err, client){
   if(err){
     throw err;
   }
-  db = client.db(mongoDBName);
+  db = client.db(mongoDBName);*/
   app.listen(port, function(){
     console.log("Server is running on port", port);
   });
-});
+//});

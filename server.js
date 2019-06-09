@@ -4,10 +4,6 @@ var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
 
 
-var sororityPhotos = require('./sororityPhotos');
-var activePhotos = require('./activePhotos');
-var registerData = require('./registerData');
-
 //mongoDB stuff when we need it
 var MongoClient = require('mongodb').MongoClient;
 var mongoHost = process.env.MONGO_HOST;

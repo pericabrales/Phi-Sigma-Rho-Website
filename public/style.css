@@ -457,71 +457,123 @@ body {
 	transform: rotate(90deg);
 }
 
-#register-backdrop {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background-color:#99ffff;
-  opacity: 0.6;
+#register-backdrop{
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1000px;
+	background-color: #99ffff;
+	opacity: 0.6;
 }
 
-#add-register-window {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1010;
-  overflow: scroll;
+#add-register-window{
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1010px;
+	overflow: scroll;
 }
 
-.register-dialog {
-  width: auto;
-  font-size: 40px;
-  max-width: 600px;
-  min-width: 350px;
-  min-height: 300px;
-  margin: 40px auto;
-  background-color: #99ffcc;
-  border-radius: 15px;
-  border: 1px solid black;
+.register-action-button{
+	font-family: 'Amatic SC', cursive,
+	font-size: 20px;
+	color: white;
+	padding: 10px;
+	margin: 5px;
+	background-color: #00b3b3;
+	border: 2px solid black;
+	border-radius: 6px;
+	font-weight: normal;
+	cursor: pointer;
 }
 
-.register-header {
-  position: relative;
-  text-align: center;
-  padding: 10px 20px;
+.register-action-button:hover{
+	background-color: #99ffff;
+	color: black;
 }
 
-.register-header h3 {
-  margin: 0;
-  font-size: 70px;
-  font-weight: 100;
+.register-dialog{
+	width: auto;
+	max-width: 600px;
+	min-width: 350px;
+	min-height: 300px;
+	margin: 40px auto;
+	background-color: #99ffcc;
+	border-radius: 15px;
+	border: 1px solid black;
 }
 
-#register-close {
- position: absolute;
- right: 10px;
- top: 5px;
- font-size: 24px;
- border: none;
- background: none;
- padding: 0;
- cursor: pointer;
+.register-header{
+	position: relative;
+	text-align: center;
+	padding: 10px 20px;
 }
 
-.register-action-button {
-  font-size: 20px;
-  padding: 10px;
-  background-color: white;
-  border: 1px solid #ababab;
-  border-radius: 5px;
-  cursor: pointer;
+.register-header h3{
+	margin: 0;
+	font-size: 70px;
+	font-weight: 100;
 }
 
-.register-body {
-  padding: 20px;
+#register-close{
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	font-size: 24px;
+	border: none;
+	cursor: pointer;
+	background-color: #99ffcc;
+}
+
+.photo-input-element{
+	display: flex;
+	align-items: center;
+	font-size: 30px;
+	margin: 20px;
+	font-weight: 600;
+}
+
+.register-input-element > label{
+	font-weight: 600;
+	font-size: 24px;
+	flex: 1 75px;
+	margin-right: 20px;
+	border: 4px;
+	padding: 10px;
+}
+
+.register-input-element input{
+	flex: 6 200px;
+	padding: 10px;
+	font-size: 20px;
+	border: 2px solid black;
+}
+
+.register-footer{
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px 10px 10px 10px;
+}
+
+#register-cancel, #register-accept{
+	margin-left: 10px;
+	font-size: 23px;
+	font-weight: 600;
+	font-family: 'Amatic SC', cursive;
+}
+
+#register-cancel, #register-accept:focus{
+	outline: none;
+}
+
+.register-body{
+	padding: 20px;
+}
+
+.register-input-element{
+	padding: 10px;
 }

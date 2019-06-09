@@ -21,7 +21,7 @@ var mongoUrl = `mongodb://${mongoUser}:${mongoPassword}@${mongoHost}:${mongoPort
 var db = null;
 
 var app = express();
-var port = process.env.PORT || 3010;
+var port = process.env.PORT || 3011;
 
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
@@ -95,6 +95,32 @@ app.get('/:photoType', function (req, res, next) {
     }
     }
   });
+});
+
+app.post('/:photoType' + '/addPhoto', function(req, res, next){
+  var photoType = req.params.photoType;
+  if(req.body && req.body.url && req.body.caption){
+    var collection = db.collection('sororityPhotos');
+    var photo = {
+      url: req.body.url,
+      caption: req.body.caption
+    }
+    collection.updateOne(
+      {photoID: photoType},
+      {$push: {photos: photo}},
+      function (err, result){
+        if(err){
+          res.status(500).send({
+            error: "Error inserting photos"
+          });
+        }else{
+            res.status(200).send("Success");
+        }
+      }
+    );
+  }else{
+    res.status(400).send("Request needs a body with all fields");
+  }
 });
 
 app.get('*', function (req, res, next) {
